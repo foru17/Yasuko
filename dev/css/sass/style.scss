@@ -1,18 +1,17 @@
 @import "normalize";
 // @import "webfont";
 @import "mixins";
-// @import "fonts";
+
 // 载入图片精灵
 // @import "sprite";
-// @import "fonts";
 @import "base";
-
+@import "fonts";
 
 @media print {
     @import "print";
 } // end of media query
-@media only screen and (min-width: 1240px) {
-    @import "1240up";
+@media only screen and (min-width: 1024px) {
+    @import "1024up";
 } // end of media query
 @media only screen and (max-width: 768px) {
     @import "768up";

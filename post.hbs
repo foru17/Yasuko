@@ -6,91 +6,129 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
-</header>
 
-<main class="content" role="main">
+    <header id="header" class="home-header blog-background banner-mask lazy {{#if image}}" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}">
+        <div class="nav-header">
+        <div class="nav-header-container">
+             <a href="{{@blog.url}}" class="back-home">Home</a>
+        </div>
+
+        </div>
+        <div class="header-wrap" >
+            <div class="post-info-container">
+                <h2 class="post-page-title ">
+                {{title}}
+            </h2>
+                <time class="post-page-time">{{date format="DD MMMM YYYY"}}</time>
+                <span class="post-page-author">{{#author}}{{name}}{{/author}}</span>
+                <span class="post-page-tags">
+                    {{tags prefix="" separator=" "}}
+               </span>
+
+            </div>
+
+        </div>
+        <div class="arrow_down">
+               <a href="javascript:;"></a>
+        </div>
+    </header>
+
+
+
+
+<main class="content" id="main" role="main">
+
     <article class="{{post_class}}">
 
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
-        </header>
+     <section class="post-content">
+     <div class="single-post-inner">
+        {{content}}
+     </div>
+    </section>
 
-        <section class="post-content">
-            {{content}}
-        </section>
 
-        <footer class="post-footer">
-
-        {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
-
-            {{#if image}}
+    {{#author}}
+                <section class="author">
+                 {{#if image}}
             <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                <a class="img" href="javascript:;" style="background-image: url('{{image}}')"><span class="hide">{{name}}'s Picture</span></a>
             </figure>
+              {{/if}}
+
+            <section class="author-detail">
+                <h4><a href="javascript:;">{{name}}</a></h4>
+            {{#if bio}}
+                 <p>{{bio}}</p>
+            {{else}}
+                <p>Read <a href="{{url}}">more posts</a> by this author.</p>
             {{/if}}
-
-            <section class="author">
-                <h4><a href="{{url}}">{{name}}</a></h4>
-
-                {{#if bio}}
-                    <p>{{bio}}</p>
-                {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
-                {{/if}}
                 <div class="author-meta">
-                    {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                     {{#if location}}
+                    <span class="author-location icon-location">{{location}}</span>
+                    {{/if}}
+                     {{#if website}}
+                    <span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>
+                    {{/if}}
                 </div>
-            </section>
 
+            </section>
+        </section>
         {{/author}}
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
 
-        </footer>
+
 
     </article>
-</main>
 
+          <section class="share">
+            <h4>分享一下</h4>
+            <div class="share-icons" id="share-icons">
+               <a class="icon-share" href="http://service.weibo.com/share/share.php?url={{url absolute="true"}}&amp;title={{encode title}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class=""><i class="iconfont icon-weibo">㐲</i></span>
+                </a>
+
+                <a class="icon-share" href=" http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?desc={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class=""><i class="iconfont icon-qzone"></i></span>
+                </a>
+                <a class="icon-share" href="http://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class=""><i class="iconfont  icon-twitter"></i></span>
+                </a>
+                <a class="icon-share" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class=""><i class="iconfont  icon-facebook">㐳</i></span>
+                </a>
+                <a class="icon-share icon-weibo" href="http://weibo.com/foru17/">
+                    <span class=""><i class="iconfont  icon-weixin">㐶</i></span>
+                </a>
+            </div>
+            <div class="wechat-notice">
+                <a href="javascript:;"><img src="https://luoleiorg.b0.upaiyun.com/wp-image/2014/12/wechat-name-public.png" alt=""></a>
+                <h6>长按图中二维码可以添加我的微信公众号</h6>
+            </div>
+
+        </section>
+
+        <div class="toggle-comment">
+            <h4>查看评论</h4>
+        </div>
+
+<section class="comment-area" >
+{{!-- <div class="ds-thread"></div> --}}
+</section>
+</main>
 <aside class="read-next">
     {{#next_post}}
-    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
+            <p>{{excerpt words="10"}}&hellip;</p>
         </section>
     </a>
     {{/next_post}}
     {{#prev_post}}
-    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story prev {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
+            <p>{{excerpt words="10"}}&hellip;</p>
         </section>
     </a>
     {{/prev_post}}

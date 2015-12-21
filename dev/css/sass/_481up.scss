@@ -1,0 +1,97 @@
+#header{
+    height:100%;
+    max-height: 100%;
+}
+.post-info-container{
+    width:84%
+}
+
+.info-mask{
+    height:6rem;
+}
+.post-title{
+    font-size:1.6rem;
+    margin:0.2rem 0;
+    line-height:1.8rem;
+}
+
+ .mask-wrapper{
+    margin-top: .5rem;
+ }
+
+#main{
+width:100%;
+margin: 2rem auto;
+}
+
+.post-page-title{
+    font-size:3.2rem;
+}
+
+.author-detail{
+    padding: 6rem 1.6rem 1.6rem;
+  // margin: 0 0 2rem 0;
+  // padding: 0 0 1.6rem 0;
+  // border-bottom: #EBF2F6 1px dashed;
+}
+
+.home-info-container{
+    margin-top: 18rem;
+    h2,h4{
+        color: #fff;
+        font-weight: lighter;
+         text-shadow:0 1px 1px #595959;
+        &:hover{
+        text-shadow:0 1px 1px #333;
+        }
+    }
+    h2{
+        font-size: 3.2rem;
+
+    }
+    h4{
+        font-size: 1.4rem;
+        letter-spacing: .5rem;
+    }
+}
+
+
+
+
+.pagination{
+    width:90%;
+    a{
+        font-size: 1rem;
+    }
+}
+
+.archive-template,.tag-template{
+    #header{
+        height: 30%;
+    }
+.home-info-container{
+    margin-top: 3rem;
+    h2,h4{
+        &:hover{
+        }
+    }
+    h2{
+        line-height: 2.2rem;
+        font-size:1.6rem;
+
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+}
+}
+
+.post-meta{
+    span.post-tags{
+        display: none;
+    }
+}
+
+.site-footer{
+    margin-top: 3rem;
+}

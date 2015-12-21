@@ -1,0 +1,85 @@
+/* 载入iconfont字体 */
+
+
+@font-face {font-family: 'iconfont';
+    src: url(#{$fontPath}/iconfont.eot); /* IE9*/
+    src: url(#{$fontPath}/iconfont.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+    url(#{$fontPath}/iconfont.woff) format('woff'), /* chrome、firefox */
+    url(#{$fontPath}/iconfont.ttf) format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url(#{$fontPath}/iconfont.svg#uxiconfont) format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    speak: none;
+}
+
+
+.iconfont{
+    vertical-align: middle;
+    &:hover{
+        opacity: 0.6;
+        color:#363636;
+    }
+}
+
+.icon-self{color:red}
+.icon-weibo{ color:#E6162D}
+.icon-twitter{color:#2aa9e0}
+.icon-facebook{color:#204385}
+.icon-google{color:#176DEE}
+.icon-weixin{color:#75D140}
+.icon-qzone{color:#186CC6}
+.icon-github{color:#333333}
+.icon-douban{color:#279337}
+.icon-luolei{color:#6596C1}
+.icon-dribble{color:#F72D84}
+
+
+
+.icon-weibo-pure{ color:#E6162D}
+.icon-twitter-pure{color:#2aa9e0}
+.icon-github-pure{color:#333333}
+.icon-dribble-pure{color:#F72D84}
+.icon-weixin-pure{color:#75D140}
+.icon-instagram-pure{color:#B66F43}
+/* 自定义IconFont CSS 才用:before的形式 */
+.single-post-inner{
+    .icon-local:before{
+        content: "\0f00ac";
+    }
+    .icon-twitter:before{
+        content: "\00e763";
+    }
+    .icon-qzone:before{
+        content: "\00e60d";
+    }
+    .icon-weibo:before{
+        content: "\003432";
+    }
+    .icon-facebook:before{
+        content: "\003433";
+    }
+    .icon-google:before{
+        content: "\003434";
+    }
+    .icon-github:before{
+        content: "\0f01ca";
+    }
+    .icon-douban:before{
+        content: "\0f01c8";
+    }
+    .icon-luolei:before{
+        content: "\00e60e"
+    }
+
+}
+
+
+
+
