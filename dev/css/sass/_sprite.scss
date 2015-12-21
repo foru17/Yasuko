@@ -1,0 +1,147 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$icon-hongxiu-name: 'icon-hongxiu';
+$icon-hongxiu-x: 334px;
+$icon-hongxiu-y: 100px;
+$icon-hongxiu-offset-x: -334px;
+$icon-hongxiu-offset-y: -100px;
+$icon-hongxiu-width: 200px;
+$icon-hongxiu-height: 74px;
+$icon-hongxiu-total-width: 534px;
+$icon-hongxiu-total-height: 380px;
+$icon-hongxiu-image: 'sprite@2x.png';
+$icon-hongxiu: (334px, 100px, -334px, -100px, 200px, 74px, 534px, 380px, 'sprite@2x.png', 'icon-hongxiu', );
+$icon-qidian-name: 'icon-qidian';
+$icon-qidian-x: 334px;
+$icon-qidian-y: 184px;
+$icon-qidian-offset-x: -334px;
+$icon-qidian-offset-y: -184px;
+$icon-qidian-width: 200px;
+$icon-qidian-height: 74px;
+$icon-qidian-total-width: 534px;
+$icon-qidian-total-height: 380px;
+$icon-qidian-image: 'sprite@2x.png';
+$icon-qidian: (334px, 184px, -334px, -184px, 200px, 74px, 534px, 380px, 'sprite@2x.png', 'icon-qidian', );
+$icon-readnovel-name: 'icon-readnovel';
+$icon-readnovel-x: 0px;
+$icon-readnovel-y: 322px;
+$icon-readnovel-offset-x: 0px;
+$icon-readnovel-offset-y: -322px;
+$icon-readnovel-width: 200px;
+$icon-readnovel-height: 58px;
+$icon-readnovel-total-width: 534px;
+$icon-readnovel-total-height: 380px;
+$icon-readnovel-image: 'sprite@2x.png';
+$icon-readnovel: (0px, 322px, 0px, -322px, 200px, 58px, 534px, 380px, 'sprite@2x.png', 'icon-readnovel', );
+$icon-rongshuxia-name: 'icon-rongshuxia';
+$icon-rongshuxia-x: 0px;
+$icon-rongshuxia-y: 110px;
+$icon-rongshuxia-offset-x: 0px;
+$icon-rongshuxia-offset-y: -110px;
+$icon-rongshuxia-width: 200px;
+$icon-rongshuxia-height: 108px;
+$icon-rongshuxia-total-width: 534px;
+$icon-rongshuxia-total-height: 380px;
+$icon-rongshuxia-image: 'sprite@2x.png';
+$icon-rongshuxia: (0px, 110px, 0px, -110px, 200px, 108px, 534px, 380px, 'sprite@2x.png', 'icon-rongshuxia', );
+$icon-tingbook-name: 'icon-tingbook';
+$icon-tingbook-x: 0px;
+$icon-tingbook-y: 0px;
+$icon-tingbook-offset-x: 0px;
+$icon-tingbook-offset-y: 0px;
+$icon-tingbook-width: 324px;
+$icon-tingbook-height: 100px;
+$icon-tingbook-total-width: 534px;
+$icon-tingbook-total-height: 380px;
+$icon-tingbook-image: 'sprite@2x.png';
+$icon-tingbook: (0px, 0px, 0px, 0px, 324px, 100px, 534px, 380px, 'sprite@2x.png', 'icon-tingbook', );
+$icon-xs8-name: 'icon-xs8';
+$icon-xs8-x: 0px;
+$icon-xs8-y: 228px;
+$icon-xs8-offset-x: 0px;
+$icon-xs8-offset-y: -228px;
+$icon-xs8-width: 214px;
+$icon-xs8-height: 84px;
+$icon-xs8-total-width: 534px;
+$icon-xs8-total-height: 380px;
+$icon-xs8-image: 'sprite@2x.png';
+$icon-xs8: (0px, 228px, 0px, -228px, 214px, 84px, 534px, 380px, 'sprite@2x.png', 'icon-xs8', );
+$icon-xxsy-name: 'icon-xxsy';
+$icon-xxsy-x: 334px;
+$icon-xxsy-y: 0px;
+$icon-xxsy-offset-x: -334px;
+$icon-xxsy-offset-y: 0px;
+$icon-xxsy-width: 200px;
+$icon-xxsy-height: 90px;
+$icon-xxsy-total-width: 534px;
+$icon-xxsy-total-height: 380px;
+$icon-xxsy-image: 'sprite@2x.png';
+$icon-xxsy: (334px, 0px, -334px, 0px, 200px, 90px, 534px, 380px, 'sprite@2x.png', 'icon-xxsy', );
+$spritesheet-width: 534px;
+$spritesheet-height: 380px;
+$spritesheet-image: 'sprite@2x.png';
+$spritesheet-sprites: ($icon-hongxiu, $icon-qidian, $icon-readnovel, $icon-rongshuxia, $icon-tingbook, $icon-xs8, $icon-xxsy, );
+$spritesheet: (534px, 380px, 'sprite@2x.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

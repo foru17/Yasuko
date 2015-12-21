@@ -1,0 +1,24 @@
+# Generated Stuff
+.sass-cache
+.sass-cache/*
+css/*.map
+
+# bundling output
+build/*
+build
+dist/*
+dist
+
+# Node Modules (use `npm install` to generate these)
+node_modules/*
+node_modules
+../*
+
+# OS X Junk
+.DS_Store
+.DS_Store/*
+
+
+# Not-Needed System Files
+*.swp
+*.bak

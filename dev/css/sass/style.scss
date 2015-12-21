@@ -1,0 +1,28 @@
+@import "normalize";
+// @import "webfont";
+@import "mixins";
+// @import "fonts";
+// 载入图片精灵
+// @import "sprite";
+// @import "fonts";
+@import "base";
+
+
+@media print {
+    @import "print";
+} // end of media query
+@media only screen and (min-width: 1240px) {
+    @import "1240up";
+} // end of media query
+@media only screen and (max-width: 768px) {
+    @import "768up";
+} // end of media query
+@media only screen and (max-width: 481px) {
+    @import "481up";
+} // end of media query
+@media only screen and (max-width: 361px) {
+    @import "361up";
+} // end of media query
+@media only screen and (max-width: 321px) {
+    @import "321up";
+} // end of media query
