@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Exo Thin'), local('Exo-Thin'), url(https://luoleiorg.b0.upaiyun.com/source/fonts/exo/ek6B72kladJz_Z6o5PEplKCWcynf_cDxXwCLxiixG1c.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Exo Regular'), local('Exo-Regular'), url(https://luoleiorg.b0.upaiyun.com/source/fonts/exo/ZcGd2dvMSgl3mHN3lKAjNw.woff) format('woff');
+}

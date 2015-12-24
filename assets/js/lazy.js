@@ -82,6 +82,8 @@
         /* Fire one scroll event per scroll. Not one scroll event per image. */
         if (0 === settings.event.indexOf("scroll")) {
             $container.bind(settings.event, function() {
+                // console.log('滚动了111');
+                // console.log('滚动');
                 return update();
             });
         }
@@ -100,6 +102,7 @@
             }
 
             /* When appear is triggered load original image. */
+
             $self.one("appear", function() {
                 if (!this.loaded) {
                     if (settings.appear) {
@@ -116,22 +119,13 @@
                             if(settings.webP_load == true){
                                 updatedUrl += '/format/webp';
                             }
+
                     console.log(updatedUrl);
                     $("<img />")
                         .bind("load", function() {
 
-                            // var original = $self.attr("data-" + settings.data_attribute );
                             $self.hide();
-                            // if(settings.advanced_load == true){
-                            //     original +='!';
-                            // }
-                            // if(settings.is_scale ==true){
-                            //     original += '/fw/' + settings.scale_width;
-                            // }
-                            // if(settings.webP_load == true){
-                            //     original += '/format/webp';
-                            // }
-                            // console.log(original);
+
                             if ($self.is("img")) {
                                 $self.attr("src", updatedUrl);
                             } else {

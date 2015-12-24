@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Exo';
-    font-style: normal;
-    font-weight: 100;
-    src: local('Exo Thin'), local('Exo-Thin'), url(https://luoleiorg.b0.upaiyun.com/source/fonts/exo/ek6B72kladJz_Z6o5PEplKCWcynf_cDxXwCLxiixG1c.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'Exo';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Exo Regular'), local('Exo-Regular'), url(https://luoleiorg.b0.upaiyun.com/source/fonts/exo/ZcGd2dvMSgl3mHN3lKAjNw.woff) format('woff');
-}
 
 body, html {
     width: 100%;
@@ -26,7 +13,7 @@ html {
     font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background-image:url(#{$imgPath}/p5.png);
+    // background-image:url(#{$imgPath}/p5.png);
     font-family: $googleFontExo, $fontOSX;
 }
 
@@ -521,12 +508,12 @@ a.btn-post-excerpt{
         max-width: 100%;
         height: auto;
     }
-    code {
-        padding: .1em .4em;
-        background: #e8f2fb;
-        border: 1px solid #c9e1f6;
-        border-radius: 3px;
-    }
+    // code {
+    //     padding: .1em .4em;
+    //     background: #e8f2fb;
+    //     border: 1px solid #c9e1f6;
+    //     border-radius: 3px;
+    // }
     // code {
     //     padding: 1px 3px;
     //     font-family: 'Open Sans', sans-serif;
@@ -792,7 +779,7 @@ a.btn-post-excerpt{
     text-align: left;
     text-indent: -9999px;
     background: rgba(0, 0, 0, .6);
-    border-radius: 50%;
+    border-radius: 5%;
     overflow: hidden;
     position: fixed;
     right: 20px;
