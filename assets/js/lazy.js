@@ -238,6 +238,7 @@
     };
 
     $.inviewport = function(element, settings) {
+
          return !$.rightoffold(element, settings) && !$.leftofbegin(element, settings) &&
                 !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
      };

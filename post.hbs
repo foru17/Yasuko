@@ -71,10 +71,10 @@
             {{/if}}
                 <div class="author-meta">
                      {{#if location}}
-                    <span class="author-location icon-location">{{location}}</span>
+                    <span class="author-location">{{location}}</span>
                     {{/if}}
                      {{#if website}}
-                    <span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>
+                    <span class="author-link"><a href="{{website}}">{{website}}</a></span>
                     {{/if}}
                 </div>
 
@@ -89,33 +89,21 @@
 
           <section class="share">
             <div class="share-icons" id="share-icons">
-               <a class="icon-share" href="http://service.weibo.com/share/share.php?url={{url absolute="true"}}&amp;title={{encode title}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class=""><i class="iconfont icon-weibo">㐲</i></span>
+               <a class="icon-share" href="http://weibo.com/foru17/">
+                    <span class=""><i class="iconfont icon-weibo">&#xe63d;</i></span>
                 </a>
 
-                <a class="icon-share" href=" http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?desc={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class=""><i class="iconfont icon-qzone"></i></span>
+                <a class="icon-share" href="https://twitter.com/foru17">
+                    <span class=""><i class="iconfont icon-twitter">&#xe63a;</i></span>
                 </a>
-                <a class="icon-share" href="http://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class=""><i class="iconfont  icon-twitter"></i></span>
+                <a class="icon-share" href="https://www.instagram.com/foru17/">
+                    <span class=""><i class="iconfont  icon-instagram">&#xe639;</i></span>
                 </a>
-                <a class="icon-share" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class=""><i class="iconfont  icon-facebook">㐳</i></span>
-                </a>
-                <a class="icon-share icon-weibo" href="http://weibo.com/foru17/">
-                    <span class=""><i class="iconfont  icon-weixin">㐶</i></span>
+                <a class="icon-share icon-weibo" href="https://www.zhihu.com/people/luolei">
+                    <span class=""><i class="iconfont  icon-zhihu">&#xe63f;</i></span>
                 </a>
             </div>
-            <div class="wechat-notice">
-                <a href="javascript:;"><img src="https://luoleiorg.b0.upaiyun.com/wp-image/2014/12/wechat-name-public.png" alt="{{url}}"></a>
-                <h6>长按图中二维码可以添加我的微信公众号</h6>
-            </div>
-
         </section>
-<section class="comment-area" >
-{{!-- <div class="ds-thread"></div> --}}
-</section>
-</main>
 <aside class="read-next">
     {{#next_post}}
     <a class="read-next-story {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
@@ -134,5 +122,12 @@
     </a>
     {{/prev_post}}
 </aside>
+<section class="comment-area yasuko-only" >
+{{!-- <div class="ds-thread"></div> --}}
+</section>
+</main>
 
+<script>
+     var duoshuoQuery = {short_name:"luolei"};
+</script>
 {{/post}}
