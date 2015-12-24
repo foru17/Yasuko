@@ -1,50 +1,25 @@
 {{!< default}}
 
-    <header id="header" class="home-header blog-background banner-mask {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <header id="header" data-url="http://luoleiorg.b0.upaiyun.com/tmp/yasuko/yasuko.jpg" class="home-header blog-background banner-mask lazy {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+        <div class="nav-header-container">
+             <a href="{{@blog.url}}" class="home-logo">羅</a>
+        </div>
         <div class="header-wrap">
         <div class="home-info-container">
             <a href="{{@blog.url}}"><h2>Stay before every beautiful thoughts</h2></a>
             <h4>在每一个美好的思想前停留</h4>
         </div>
-        <div class="arrow_down">
+        <div class="arrow_down" data-offset="-45">
                <a href="javascript:;"></a>
         </div>
     </header>
 {{! The main content area on the homepage }}
 <main id="main" class="content homepage" role="main">
 {{! Each post will be output using this markup }}
-{{#foreach posts}}
-
-<article class="post-in-list {{post_class}}">
-<section class="post-excerpt">
-<a href="{{url}}">
-{{content words="0"}}
-</a>
-<div class="info-mask">
-<div class="mask-wrapper">
-<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-<div class="post-meta">
-<span class="post-time"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
-<span class="post-tags">
-{{tags prefix="" separator=" "}}
-</span>
-</div>
-</div>
-
-</div>
-
-{{!-- <div class="excerpt-word hidden">
-{{excerpt}}
-</div> --}}
-</section>
-
-        </article>
-
-{{/foreach}}
-
+{{> "loop"}}
 {{!! After all the posts, we have the previous/next pagination links }}
 
-{{pagination}}
+{{!-- {{pagination}} --}}
 </main>
 
 

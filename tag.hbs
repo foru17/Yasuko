@@ -2,29 +2,20 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
-<header class="main-header tag-head {{#if tag.image}}" style="background-image: url({{tag.image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
-    <nav class="main-nav overlay clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">{{tag.name}}</h1>
-            <h2 class="page-description">
-                {{#if tag.description}}
-                    {{tag.description}}
-                {{else}}
-                    A {{pagination.total}}-post collection
-                {{/if}}
-            </h2>
+    <header id="header" data-url="http://luoleiorg.b0.upaiyun.com/tmp/yasuko/bg.jpeg" class="home-header lazy blog-background banner-mask {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+        <div class="header-wrap">
+        <div class="home-info-container">
+            <a href="{{@blog.url}}"><h2>Every thing about</h2></a>
+            <h4>「{{tag.name}}」</h4>
         </div>
-    </div>
-</header>
+        <div class="arrow_down">
+               <a href="javascript:;"></a>
+        </div>
+    </header>
+
 
 {{! The main content area on the homepage }}
-<main class="content" role="main">
+<main class="content" id="main" role="main">
 
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}

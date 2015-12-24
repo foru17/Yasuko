@@ -1,30 +1,47 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}} post-in-list">
-<section class="post-excerpt">
-<a href="{{url}}">
-{{content words="0"}}
-</a>
-<div class="info-mask">
+
+<article class="post-in-list {{post_class}}">
+    <section class="post-excerpt">
+    <a href="{{url}}">
+    {{content words="0"}}
+    </a>
+    <div class="info-mask">
 <div class="mask-wrapper">
 <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 <div class="post-meta">
-<span class="post-time"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+<span class="post-time"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}">{{date format="DD MMM YYYY"}}</time></span>
 <span class="post-tags">
 {{tags prefix="" separator=" "}}
 </span>
 </div>
 </div>
-
 </div>
+    </section>
+    <div class="post-excerpt-mirror">
+    <div class="post-excerpt-mirror-mask">
+    <a href="{{url}}">{{content words="0"}}</a>
 
-{{!-- <div class="excerpt-word hidden">
-{{excerpt}}
-</div> --}}
-</section>
+    <div class="excert-detail-container">
+        <div class="post-meta">
+            <span class="post-time"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+             <p class="post-short-intro">{{excerpt words="10"}}</p>
+            <span class="post-tags">
+           {{tags prefix="" separator=" "}}
+            </span>
+            <a href="{{url}}" class="btn-post-excerpt">阅读原文</a>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
 </article>
+
 {{/foreach}}
+
 
 {{! Previous/next page links - displayed on every page }}
 {{pagination}}

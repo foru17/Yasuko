@@ -5,9 +5,12 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
+    {{#if image}}
+    <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{image}}">
+    {{else}}
+    <header id="header" class="home-header blog-background banner-mask lazy" data-url="https://luoleiorg.b0.upaiyun.com/tmp/yasuko/yasuko.jpg" style="background-image:no-cover">
+    {{/if}}
 
-
-    <header id="header" class="home-header blog-background banner-mask lazy {{#if image}}" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}">
         <div class="nav-header">
         <div class="nav-header-container">
              <a href="{{@blog.url}}" class="back-home">Home</a>
@@ -43,6 +46,10 @@
      <section class="post-content">
      <div class="single-post-inner">
         {{content}}
+        <div class="qr-code">
+            <img src="http://dev.xiaoyi.com/download/qr?content={{url absolute="true"}}" alt="">
+            <p>扫描二维码,分享此文章</p>
+        </div>
      </div>
     </section>
 
@@ -56,7 +63,7 @@
               {{/if}}
 
             <section class="author-detail">
-                <h4><a href="javascript:;">{{name}}</a></h4>
+                <a href="javascript:;">{{name}}</a>
             {{#if bio}}
                  <p>{{bio}}</p>
             {{else}}
@@ -81,7 +88,6 @@
     </article>
 
           <section class="share">
-            <h4>分享一下</h4>
             <div class="share-icons" id="share-icons">
                <a class="icon-share" href="http://service.weibo.com/share/share.php?url={{url absolute="true"}}&amp;title={{encode title}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class=""><i class="iconfont icon-weibo">㐲</i></span>
@@ -101,16 +107,11 @@
                 </a>
             </div>
             <div class="wechat-notice">
-                <a href="javascript:;"><img src="https://luoleiorg.b0.upaiyun.com/wp-image/2014/12/wechat-name-public.png" alt=""></a>
+                <a href="javascript:;"><img src="https://luoleiorg.b0.upaiyun.com/wp-image/2014/12/wechat-name-public.png" alt="{{url}}"></a>
                 <h6>长按图中二维码可以添加我的微信公众号</h6>
             </div>
 
         </section>
-
-        <div class="toggle-comment">
-            <h4>查看评论</h4>
-        </div>
-
 <section class="comment-area" >
 {{!-- <div class="ds-thread"></div> --}}
 </section>
@@ -120,7 +121,7 @@
     <a class="read-next-story {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
-            <p>{{excerpt words="10"}}&hellip;</p>
+            <p>{{excerpt words="6"}}&hellip;</p>
         </section>
     </a>
     {{/next_post}}
@@ -128,7 +129,7 @@
     <a class="read-next-story prev {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
-            <p>{{excerpt words="10"}}&hellip;</p>
+            <p>{{excerpt words="6"}}&hellip;</p>
         </section>
     </a>
     {{/prev_post}}
