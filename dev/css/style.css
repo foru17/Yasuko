@@ -987,7 +987,8 @@ a.btn-post-excerpt {
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    text-indent: -9999px; }
     .single-post-inner img.full-img {
       max-width: none;
       width: 106%;

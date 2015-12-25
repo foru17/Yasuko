@@ -1391,8 +1391,10 @@ a.btn-post-excerpt
     display: block;
 
     max-width: 100%;
-    height: auto; 
+    height: auto;
     margin: 0 auto;
+
+    text-indent: -9999px;
 }
 .single-post-inner img.full-img
 {
