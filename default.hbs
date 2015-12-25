@@ -15,10 +15,10 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" /> --}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/all.min.css"}}" />
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+
 </head>
 <body class="{{body_class}} nav-closed">
 
@@ -31,16 +31,17 @@
     <a href="">Theme Yasuko  </a> <a href="" class="github-repo"><span class="gadget-github"></span>Star</a> Designed by <a href="http://luolei.org ">@罗磊</a>
     </section>
         <section class="poweredby ">Powered by  <a href="https://ghost.org ">Ghost</a></section>
+        <section><a href="http://www.miitbeian.gov.cn/">粤ICP备14004235号-1</a></section>
 </footer>
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script type="text/javascript" src="{{asset "js/lazy.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/webfont.js"}}"></script>
+    {{!--<script type="text/javascript" src="{{asset "js/lazy.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/webfont.js"}}"></script> --}}
     <script type="text/javascript" src="{{asset "js/all.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset "css/font.min.css"}}" />
+    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "css/font.min.css"}}" /> --}}
 </body>
 </html>

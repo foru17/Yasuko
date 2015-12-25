@@ -1142,8 +1142,13 @@ h1
 .post-excerpt-mirror a
 {
     display: block;
+    overflow: hidden;
+    overflow: hidden; 
 
     width: 100%;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .post-excerpt-mirror img
 {
@@ -1354,7 +1359,7 @@ a.btn-post-excerpt
 
     color: #fff;
     border-radius: .3rem;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(59, 59, 59, .5);
 }
 .pagination a:hover
 {
@@ -1394,16 +1399,14 @@ a.btn-post-excerpt
     width: 106%;
     max-width: none;
     margin: 0 -3%;
-
-    -webkit-transition: width 100ms linear .3s;
-            transition: width 100ms linear .3s;
+}
+.single-post-inner .loading
+{
+    opacity: .3;
 }
 .single-post-inner .lazy
 {
     display: block;
-    visibility: hidden; 
-
-    height: .5px;
 }
 .single-post-inner .lazy.full-img
 {
@@ -1421,11 +1424,19 @@ a.btn-post-excerpt
     max-width: none;
     margin: 0 -3%;
 }
+.single-post-inner img[src='']
+{
+    display: none;
+}
 .single-post-inner a
 {
-    font-family: 'Exo', sans-serif; 
+    font-family: 'Exo', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
 
     padding: 0 .5rem;
+
+    vertical-align: top; 
 
     color: #54b5db;
 }
@@ -1435,7 +1446,7 @@ a.btn-post-excerpt
 
     padding-right: .3rem;
 
-    vertical-align: top;
+    vertical-align: baseline;
 }
 .single-post-inner p
 {
@@ -1646,7 +1657,7 @@ a.btn-post-excerpt
 .home-info-container h2,
 .home-info-container h4
 {
-    font-family: 'Exo';
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: lighter;
 
     color: #fff;
@@ -1692,7 +1703,7 @@ a.btn-post-excerpt
 
     display: inline-block;
 
-    margin: .3rem .6rem;
+    margin: .3rem .6rem .3rem 0;
     padding: 0rem 1rem;
 
     color: #fff;
@@ -1748,6 +1759,7 @@ a.btn-post-excerpt
     font-weight: lighter;
     line-height: 4.8rem;
 
+    display: -webkit-box;
     overflow: hidden;
 
     min-height: 9.4rem;
@@ -1755,9 +1767,13 @@ a.btn-post-excerpt
 
     text-align: left;
     white-space: normal;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
 
     color: #fff;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .share
@@ -1787,7 +1803,7 @@ a.btn-post-excerpt
 
 .share-icons
 {
-    margin: 1.5rem auto 5rem; 
+    margin: 1.5rem auto 3rem; 
 
     text-align: center;
 }
@@ -2223,8 +2239,8 @@ Copyright (c) 2014 Daniel Eden
     display:         flex;
 
     max-width: 86rem;
-    margin: 0 auto; 
-    margin-top: 10rem;
+    margin: 5rem auto; 
+    margin-top: 5rem;
 
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -2321,7 +2337,7 @@ Copyright (c) 2014 Daniel Eden
 
 .read-next-story p
 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
     position: relative; 
     z-index: 100;
@@ -2369,18 +2385,7 @@ Copyright (c) 2014 Daniel Eden
     border-left: rgba(0, 0, 100, .04) 1px solid;
 }
 
-/* Correctly position site-footer when next to the .read-next container */
 /* 载入iconfont字体 */
-@font-face
-{
-    font-family: 'iconfont';
-
-    src: url(../../assets/fonts/iconfont.eot);
-    /* IE9*/
-    src: url(../../assets/fonts/iconfont.eot?#iefix) format('embedded-opentype'), url(../../assets/fonts/iconfont.woff) format('woff'), url(../../assets/fonts/iconfont.ttf) format('truetype'), url(../../assets/fonts/iconfont.svg#uxiconfont) format('svg');
-    /* iOS 4.1- */
-}
-
 .iconfont
 {
     font-family: 'iconfont' !important;
@@ -2404,69 +2409,79 @@ Copyright (c) 2014 Daniel Eden
     color: #363636;
 }
 
-.icon-self
+.iconfont-self
 {
     color: red;
 }
 
-.icon-weibo
+.iconfont-weibo
 {
     color: #e6162d;
 }
 
-.icon-twitter
+.iconfont-twitter
 {
     color: #2aa9e0;
 }
 
-.icon-facebook
+.iconfont-facebook
 {
     color: #204385;
 }
 
-.icon-google
+.iconfont-google
 {
     color: #176dee;
 }
 
-.icon-weixin
+.iconfont-wikipedia
+{
+    color: #626262;
+}
+
+.iconfont-weixin
 {
     color: #75d140;
 }
 
-.icon-qzone
+.iconfont-qzone
 {
     color: #186cc6;
 }
 
-.icon-github
+.iconfont-github
 {
     color: #333;
 }
 
-.icon-douban
+.iconfont-douban
 {
     color: #279337;
 }
 
-.icon-luolei
+.iconfont-luolei
 {
     color: #6596c1;
 }
 
-.icon-dribble
+.iconfont-dribble
 {
     color: #f72d84;
 }
 
-.icon-zhihu
+.iconfont-zhihu
 {
     color: #0767c8;
 }
 
-.icon-instagram
+.iconfont-instagram
 {
     color: #9b6954;
+}
+
+.iconfont-v2ex
+{
+    color: #1a1a1b;
 }
 
 .icon-weibo-pure
@@ -2494,56 +2509,76 @@ Copyright (c) 2014 Daniel Eden
     color: #75d140;
 }
 
-.icon-instagram-pure,
-.instagram
-{
-    color: #b66f43;
-}
-
-/* 自定义IconFont CSS 才用:before的形式 */
-.single-post-inner .icon-local:before
+.icon-instagram-pure .iconfont-local:before,
+.single-post-inner .iconfont-local:before
 {
     content: '\0f00ac';
 }
 
-.single-post-inner .icon-twitter:before
+.icon-instagram-pure .iconfont-twitter:before,
+.single-post-inner .iconfont-twitter:before
 {
-    content: '\00e763';
+    content: '\00e604';
 }
 
-.single-post-inner .icon-qzone:before
+.icon-instagram-pure .iconfont-wechat:before,
+.single-post-inner .iconfont-wechat:before
 {
-    content: '\00e60d';
+    content: '\00e606';
 }
 
-.single-post-inner .icon-weibo:before
+.icon-instagram-pure .iconfont-weibo:before,
+.single-post-inner .iconfont-weibo:before
 {
-    content: '\003432';
+    content: '\00e605';
 }
 
-.single-post-inner .icon-facebook:before
+.icon-instagram-pure .iconfont-facebook:before,
+.single-post-inner .iconfont-facebook:before
 {
-    content: '\003433';
+    content: '\00e601';
 }
 
-.single-post-inner .icon-google:before
+.icon-instagram-pure .iconfont-google:before,
+.single-post-inner .iconfont-google:before
 {
-    content: '\003434';
+    content: '\00e602';
 }
 
-.single-post-inner .icon-github:before
+.icon-instagram-pure .iconfont-github:before,
+.single-post-inner .iconfont-github:before
 {
-    content: '\0f01ca';
+    content: '\00e60a';
 }
 
+.icon-instagram-pure .iconfont-douban:before,
 .single-post-inner .iconfont-douban:before
 {
-    content: '\00e636';
+    content: '\0e600';
 }
 
+.icon-instagram-pure .iconfont-luolei:before,
 .single-post-inner .iconfont-luolei:before
 {
     content: '\0';
+}
+
+.icon-instagram-pure .iconfont-v2ex:before,
+.single-post-inner .iconfont-v2ex:before
+{
+    content: '\00e605';
+}
+
+.icon-instagram-pure .iconfont-zhihu:before,
+.single-post-inner .iconfont-zhihu:before
+{
+    content: '\00e609';
+}
+
+.icon-instagram-pure .iconfont-wikipedia:before,
+.single-post-inner .iconfont-wikipedia:before
+{
+    content: '\00e608';
 }
 
 .yasuko-only #ds-reset .ds-avatar img
@@ -2674,6 +2709,11 @@ Copyright (c) 2014 Daniel Eden
     {
         max-height: 100%;
     }
+    .home-info-container
+    {
+        max-width: 80%;
+        margin: 16rem auto;
+    }
     .read-next
     {
                 flex-direction: column;
@@ -2689,6 +2729,16 @@ Copyright (c) 2014 Daniel Eden
     {
         font-size: 2.4rem;
         line-height: 3.2rem;
+
+        display: -webkit-box;
+        overflow: hidden;
+
+        white-space: normal;
+        text-overflow: ellipsis;
+        text-overflow: ellipsis;
+
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
     .read-next p
     {
@@ -2739,8 +2789,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .post-title
     {
-        font-size: 1.6rem;
-        line-height: 1.8rem; 
+        line-height: 2.2rem; 
 
         margin: .2rem 0;
     }
@@ -2764,6 +2813,36 @@ Copyright (c) 2014 Daniel Eden
     .post-excerpt-mirror-mask
     {
         display: block;
+    }
+    .post-excerpt p
+    {
+        display: block;
+        overflow: hidden;
+    }
+    .post-excerpt-mirror p
+    {
+        display: block;
+        overflow: hidden;
+    }
+    .post-excerpt-mirror a
+    {
+        font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+        font-size: 2rem;
+    }
+    .post-excerpt-mirror a.btn-post-excerpt
+    {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+
+        margin-top: 1.3rem;
+    }
+    .post-excerpt-mirror .post-short-intro
+    {
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight'; 
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+        max-height: 4rem;
     }
     .excert-detail-container
     {

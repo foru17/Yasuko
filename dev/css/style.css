@@ -589,7 +589,8 @@ div.prism-show-language > div.prism-show-language-label[data-language] {
   -o-transform: none;
   transform: none; }
 
-body, html {
+body,
+html {
   width: 100%;
   min-height: 100%;
   height: 100%;
@@ -607,7 +608,12 @@ html {
 a {
   text-decoration: none; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0; }
 
@@ -634,7 +640,8 @@ h1 {
   line-height: 3.8rem;
   margin-bottom: .5rem; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table; }
 
@@ -769,7 +776,9 @@ h1 {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite; }
 
-.home-template #main, .archive-template #main, .tag-template #main {
+.home-template #main,
+.archive-template #main,
+.tag-template #main {
   margin: 2rem auto; }
 
 .archive-template .arrow_down {
@@ -817,7 +826,11 @@ h1 {
   z-index: 100; }
   .post-excerpt-mirror a {
     display: block;
-    width: 100%; }
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden; }
   .post-excerpt-mirror img {
     display: block;
     width: 100%;
@@ -952,7 +965,7 @@ a.btn-post-excerpt {
     display: inline-block;
     text-align: center;
     color: #fff;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(59, 59, 59, 0.5);
     height: 2.4rem;
     line-height: 2.4rem;
     padding: .3rem .8rem; }
@@ -978,13 +991,11 @@ a.btn-post-excerpt {
     .single-post-inner img.full-img {
       max-width: none;
       width: 106%;
-      margin: 0 -3%;
-      -webkit-transition: width 100ms linear .3s;
-      transition: width 100ms linear .3s; }
+      margin: 0 -3%; }
+  .single-post-inner .loading {
+    opacity: .3; }
   .single-post-inner .lazy {
-    display: block;
-    height: .5px;
-    visibility: hidden; }
+    display: block; }
     .single-post-inner .lazy.full-img {
       height: auto;
       visibility: visible; }
@@ -994,14 +1005,19 @@ a.btn-post-excerpt {
     max-width: none;
     width: 106%;
     margin: 0 -3%; }
+  .single-post-inner img[src=''] {
+    display: none; }
   .single-post-inner a {
     color: #54B5DB;
     padding: 0 .5rem;
-    font-family: "Exo", sans-serif; }
+    line-height: 2.8rem;
+    font-size: 1.6rem;
+    font-family: "Exo", sans-serif;
+    vertical-align: top; }
     .single-post-inner a .iconfont {
       line-height: 2.8rem;
       padding-right: .3rem;
-      vertical-align: top; }
+      vertical-align: baseline; }
   .single-post-inner p {
     color: #333;
     font-size: 1.6rem;
@@ -1013,13 +1029,26 @@ a.btn-post-excerpt {
     padding: 0;
     -webkit-transition: padding 0.15s linear;
     transition: padding 0.15s linear; }
-  .single-post-inner h1, .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h5, .single-post-inner h6, .single-post-inner pre, .single-post-inner code {
+  .single-post-inner h1,
+  .single-post-inner h2,
+  .single-post-inner h3,
+  .single-post-inner h4,
+  .single-post-inner h5,
+  .single-post-inner h6,
+  .single-post-inner pre,
+  .single-post-inner code {
     color: #595959; }
-  .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h6 {
+  .single-post-inner h2,
+  .single-post-inner h3,
+  .single-post-inner h4,
+  .single-post-inner h6 {
     margin-top: .5rem;
     position: relative;
     text-indent: 1.2em; }
-    .single-post-inner h2:before, .single-post-inner h3:before, .single-post-inner h4:before, .single-post-inner h6:before {
+    .single-post-inner h2:before,
+    .single-post-inner h3:before,
+    .single-post-inner h4:before,
+    .single-post-inner h6:before {
       display: block;
       position: absolute;
       content: '#';
@@ -1041,7 +1070,9 @@ a.btn-post-excerpt {
     padding-left: 1rem; }
   .single-post-inner hr {
     border: 1px solid #efefef; }
-  .single-post-inner iframe, .single-post-inner frame, .single-post-inner video {
+  .single-post-inner iframe,
+  .single-post-inner frame,
+  .single-post-inner video {
     max-width: 100%;
     height: auto; }
   .single-post-inner pre {
@@ -1119,12 +1150,14 @@ a.btn-post-excerpt {
 
 .home-info-container {
   margin-top: 18rem; }
-  .home-info-container h2, .home-info-container h4 {
+  .home-info-container h2,
+  .home-info-container h4 {
     color: #fff;
-    font-family: "Exo";
+    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     text-shadow: 0 1px 1px #595959; }
-    .home-info-container h2:hover, .home-info-container h4:hover {
+    .home-info-container h2:hover,
+    .home-info-container h4:hover {
       color: #efefef;
       text-shadow: 0 1px 1px #000; }
   .home-info-container h2 {
@@ -1148,7 +1181,7 @@ a.btn-post-excerpt {
     font-size: 1.4rem;
     line-height: 1.6rem;
     display: inline-block;
-    margin: .3rem .6rem;
+    margin: .3rem .6rem .3rem 0;
     padding: 0rem 1rem;
     background: rgba(255, 255, 255, 0.3);
     border-radius: .3rem; }
@@ -1189,7 +1222,11 @@ a.btn-post-excerpt {
   font-family: "Exo" "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   white-space: normal;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
 
 .share {
   text-align: center;
@@ -1210,7 +1247,7 @@ a.btn-post-excerpt {
 
 .share-icons {
   text-align: center;
-  margin: 1.5rem auto 5rem; }
+  margin: 1.5rem auto 3rem; }
   .share-icons a {
     display: inline-block;
     font-size: 2rem;
@@ -1483,9 +1520,9 @@ Copyright (c) 2014 Daniel Eden
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  margin-top: 10rem;
+  margin-top: 5rem;
   max-width: 86rem;
-  margin: 0 auto; }
+  margin: 5rem auto; }
 
 .read-next-story {
   display: -webkit-box;
@@ -1547,7 +1584,7 @@ Copyright (c) 2014 Daniel Eden
 
 .read-next-story p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.8);
   padding: 0 10rem;
   z-index: 100;
@@ -1577,15 +1614,7 @@ Copyright (c) 2014 Daniel Eden
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* Correctly position site-footer when next to the .read-next container */
 /* 载入iconfont字体 */
-@font-face {
-  font-family: 'iconfont';
-  src: url(../../assets/fonts/iconfont.eot);
-  /* IE9*/
-  src: url(../../assets/fonts/iconfont.eot?#iefix) format("embedded-opentype"), url(../../assets/fonts/iconfont.woff) format("woff"), url(../../assets/fonts/iconfont.ttf) format("truetype"), url(../../assets/fonts/iconfont.svg#uxiconfont) format("svg");
-  /* iOS 4.1- */ }
-
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -1601,44 +1630,50 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0.6;
     color: #363636; }
 
-.icon-self {
+.iconfont-self {
   color: red; }
 
-.icon-weibo {
+.iconfont-weibo {
   color: #E6162D; }
 
-.icon-twitter {
+.iconfont-twitter {
   color: #2aa9e0; }
 
-.icon-facebook {
+.iconfont-facebook {
   color: #204385; }
 
-.icon-google {
+.iconfont-google {
   color: #176DEE; }
 
-.icon-weixin {
+.iconfont-wikipedia {
+  color: #626262; }
+
+.iconfont-weixin {
   color: #75D140; }
 
-.icon-qzone {
+.iconfont-qzone {
   color: #186CC6; }
 
-.icon-github {
+.iconfont-github {
   color: #333333; }
 
-.icon-douban {
+.iconfont-douban {
   color: #279337; }
 
-.icon-luolei {
+.iconfont-luolei {
   color: #6596C1; }
 
-.icon-dribble {
+.iconfont-dribble {
   color: #F72D84; }
 
-.icon-zhihu {
+.iconfont-zhihu {
   color: #0767c8; }
 
-.icon-instagram {
+.iconfont-instagram {
   color: #9b6954; }
+
+.iconfont-v2ex {
+  color: #1A1A1B; }
 
 .icon-weibo-pure {
   color: #E6162D; }
@@ -1655,36 +1690,53 @@ Copyright (c) 2014 Daniel Eden
 .icon-weixin-pure {
   color: #75D140; }
 
-.icon-instagram-pure, .instagram {
-  color: #B66F43; }
-
-/* 自定义IconFont CSS 才用:before的形式 */
-.single-post-inner .icon-local:before {
+.icon-instagram-pure .iconfont-local:before,
+.single-post-inner .iconfont-local:before {
   content: "\0f00ac"; }
 
-.single-post-inner .icon-twitter:before {
-  content: "\00e763"; }
+.icon-instagram-pure .iconfont-twitter:before,
+.single-post-inner .iconfont-twitter:before {
+  content: "\00e604"; }
 
-.single-post-inner .icon-qzone:before {
-  content: "\00e60d"; }
+.icon-instagram-pure .iconfont-wechat:before,
+.single-post-inner .iconfont-wechat:before {
+  content: "\00e606"; }
 
-.single-post-inner .icon-weibo:before {
-  content: "\003432"; }
+.icon-instagram-pure .iconfont-weibo:before,
+.single-post-inner .iconfont-weibo:before {
+  content: "\00e605"; }
 
-.single-post-inner .icon-facebook:before {
-  content: "\003433"; }
+.icon-instagram-pure .iconfont-facebook:before,
+.single-post-inner .iconfont-facebook:before {
+  content: "\00e601"; }
 
-.single-post-inner .icon-google:before {
-  content: "\003434"; }
+.icon-instagram-pure .iconfont-google:before,
+.single-post-inner .iconfont-google:before {
+  content: "\00e602"; }
 
-.single-post-inner .icon-github:before {
-  content: "\0f01ca"; }
+.icon-instagram-pure .iconfont-github:before,
+.single-post-inner .iconfont-github:before {
+  content: "\00e60a"; }
 
+.icon-instagram-pure .iconfont-douban:before,
 .single-post-inner .iconfont-douban:before {
-  content: "\00e636"; }
+  content: "\0e600"; }
 
+.icon-instagram-pure .iconfont-luolei:before,
 .single-post-inner .iconfont-luolei:before {
   content: "\0"; }
+
+.icon-instagram-pure .iconfont-v2ex:before,
+.single-post-inner .iconfont-v2ex:before {
+  content: "\00e605"; }
+
+.icon-instagram-pure .iconfont-zhihu:before,
+.single-post-inner .iconfont-zhihu:before {
+  content: '\00e609'; }
+
+.icon-instagram-pure .iconfont-wikipedia:before,
+.single-post-inner .iconfont-wikipedia:before {
+  content: '\00e608'; }
 
 .yasuko-only #ds-reset .ds-avatar img {
   width: 54px;
@@ -1766,6 +1818,9 @@ Copyright (c) 2014 Daniel Eden
     left: 0; }
   #header {
     max-height: 100%; }
+  .home-info-container {
+    max-width: 80%;
+    margin: 16rem auto; }
   .read-next {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1775,7 +1830,14 @@ Copyright (c) 2014 Daniel Eden
     margin-top: 4rem; }
   .read-next-story h2 {
     font-size: 2.4rem;
-    line-height: 3.2rem; }
+    line-height: 3.2rem;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; }
   .read-next p {
     padding: 0 1rem; }
   .read-next-story.no-cover + .read-next-story.no-cover {
@@ -1802,9 +1864,8 @@ Copyright (c) 2014 Daniel Eden
   .info-mask {
     height: 6rem; }
   .post-title {
-    font-size: 1.6rem;
     margin: 0.2rem 0;
-    line-height: 1.8rem; }
+    line-height: 2.2rem; }
   .mask-wrapper {
     margin-top: .5rem; }
   #main {
@@ -1816,17 +1877,37 @@ Copyright (c) 2014 Daniel Eden
     padding: 6rem 1.6rem 1.6rem; }
   .post-excerpt-mirror-mask {
     display: block; }
+  .post-excerpt p {
+    display: block;
+    overflow: hidden; }
+  .post-excerpt-mirror p {
+    display: block;
+    overflow: hidden; }
+  .post-excerpt-mirror a {
+    font-size: 2rem;
+    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .post-excerpt-mirror a.btn-post-excerpt {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      margin-top: 1.3rem; }
+  .post-excerpt-mirror .post-short-intro {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    max-height: 4rem;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight"; }
   .excert-detail-container {
     max-width: 80%;
     width: 80%;
     margin-left: -40%; }
   .home-info-container {
     margin-top: 6rem; }
-    .home-info-container h2, .home-info-container h4 {
+    .home-info-container h2,
+    .home-info-container h4 {
       color: #fff;
       font-weight: lighter;
       text-shadow: 0 1px 1px #595959; }
-      .home-info-container h2:hover, .home-info-container h4:hover {
+      .home-info-container h2:hover,
+      .home-info-container h4:hover {
         text-shadow: 0 1px 1px #333; }
     .home-info-container h2 {
       font-size: 3.2rem; }
@@ -1837,13 +1918,17 @@ Copyright (c) 2014 Daniel Eden
     width: 90%; }
     .pagination a {
       font-size: 1rem; }
-  .archive-template #header, .tag-template #header {
+  .archive-template #header,
+  .tag-template #header {
     height: 45%; }
-  .archive-template .home-info-container, .tag-template .home-info-container {
+  .archive-template .home-info-container,
+  .tag-template .home-info-container {
     margin-top: 6rem; }
-    .archive-template .home-info-container h2, .tag-template .home-info-container h2 {
+    .archive-template .home-info-container h2,
+    .tag-template .home-info-container h2 {
       font-size: 3.2rem; }
-    .archive-template .home-info-container h4, .tag-template .home-info-container h4 {
+    .archive-template .home-info-container h4,
+    .tag-template .home-info-container h4 {
       font-size: 1.2rem; }
   .info-mask {
     display: none; }

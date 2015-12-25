@@ -15,13 +15,13 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-iconfontzhihu:before { content: "\e63f"; }
-.icon-iconfontweibo:before { content: "\e63d"; }
-.icon-iconfontwikipedia:before { content: "\e63e"; }
-.icon-iconfontv2ex:before { content: "\e63b"; }
-.icon-iconfontwechat:before { content: "\e63c"; }
-.icon-iconfontinstagram:before { content: "\e639"; }
-.icon-iconfonttwitter:before { content: "\e63a"; }
-.icon-iconfontfacebook:before { content: "\e637"; }
-.icon-iconfontgoogle:before { content: "\e638"; }
-.icon-iconfontdouban:before { content: "\e636"; }
+.icon-iconfontdouban:before { content: "\e600"; }
+.icon-iconfontfacebook:before { content: "\e601"; }
+.icon-iconfontgoogle:before { content: "\e602"; }
+.icon-iconfontinstagram:before { content: "\e603"; }
+.icon-iconfonttwitter:before { content: "\e604"; }
+.icon-iconfontv2ex:before { content: "\e605"; }
+.icon-iconfontwechat:before { content: "\e606"; }
+.icon-iconfontweibo:before { content: "\e607"; }
+.icon-iconfontwikipedia:before { content: "\e608"; }
+.icon-iconfontzhihu:before { content: "\e609"; }
