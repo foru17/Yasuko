@@ -170,7 +170,7 @@ var General = {
             'dribble': iconFontTag + '-dribble',
             'v2ex': iconFontTag + '-v2ex',
             'zhihu': iconFontTag + '-zhihu',
-            'wikipedia':iconFontTag +'-wikipedia'
+            'wikipedia': iconFontTag + '-wikipedia'
 
         }
 
@@ -253,41 +253,27 @@ var ImageSmartLoader = {
 
     },
     webPCheck: function(feature, callback) {
-        if (!window.localStorage || typeof localStorage !== 'object') return;
-        var name = 'webp',
-            TestImages = {
+        var TestImages = {
                 demo: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="
             };
         // !localStorage.getItem(name) || (localStorage.getItem(name) !== 'available' && localStorage.getItem(name) !== 'disable')
-        if (!!localStorage.getItem(name) || (localStorage.getItem(name) == 'available' && localStorage.getItem(name) !== 'disable')) {
-            console.log('支持Webp哦');
-            var img = new Image();
-            img.onload = function() {
-                var result = (img.width > 0) && (img.height > 0);
-                console.log('支持Webp');
-                // alert('支持')
-                ImageSmartLoader.isWebPSupported = true;
-                ImageSmartLoader.webPLoader();
-                try {
-                    localStorage.setItem(name, 'available');
-                } catch (e) {
-                    console.log('e')
-                }
-            };
-            img.onerror = function() {
-                console.log('不支持Webp');
-                try {
-                    localStorage.setItem(name, 'disable');
-                } catch (e) {
-                    console.log('e')
-                }
-                ImageSmartLoader.isWebPSupported = false;
-                ImageSmartLoader.webPLoader();
-                // callback(feature, false);
-            };
-            img.src = "data:image/webp;base64," + TestImages['demo'];
+        console.log('支持Webp哦');
+        var img = new Image();
+        img.onload = function() {
+            var result = (img.width > 0) && (img.height > 0);
+            console.log('支持Webp');
+            // alert('支持')
+            ImageSmartLoader.isWebPSupported = true;
+            ImageSmartLoader.webPLoader();
         };
+        img.onerror = function() {
+            console.log('不支持Webp');
 
+            ImageSmartLoader.isWebPSupported = false;
+            ImageSmartLoader.webPLoader();
+            // callback(feature, false);
+        };
+        img.src = "data:image/webp;base64," + TestImages['demo'];
 
     },
     imgLoader: function() {
