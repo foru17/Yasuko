@@ -6,15 +6,17 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
     {{#if image}}
+    <img src="{{image}}!/fw/200" class="hide">
     <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{image}}">
     {{else}}
+    <img src="https://luoleiorg.b0.upaiyun.com/blog/yasuko/yasuko-wechat.jpg!" class="hide">
     <header id="header" class="home-header blog-background banner-mask lazy" data-url="https://luoleiorg.b0.upaiyun.com/tmp/yasuko/yasuko.jpg" style="background-image:no-cover">
     {{/if}}
 
         <div class="nav-header">
         <div class="nav-header-container">
              <a href="{{@blog.url}}" class="back-home">Home</a>
-             
+
         </div>
 
         </div>
