@@ -994,7 +994,7 @@ h1
 
 .post-template .site-footer
 {
-    margin-top: 13rem;
+    margin-top: 5rem;
 }
 
 .wechat-only
@@ -3068,6 +3068,12 @@ Copyright (c) 2014 Daniel Eden
         top: 0rem; 
 
         opacity: .8;
+    }
+    .share-icons a i
+    {
+        font-size: 4.2rem;
+
+        margin: 0 .8rem;
     }
     .tag-box a
     {
