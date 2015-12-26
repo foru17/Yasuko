@@ -1419,7 +1419,7 @@ a.btn-post-excerpt
 
     overflow: hidden;
 
-    padding: 0rem 2.8% 1.6rem;
+    padding: 0rem 2.8% .8rem;
 
     border-bottom: 1px dashed #e5e5e5;
 }
@@ -1586,6 +1586,35 @@ a.btn-post-excerpt
 
     border: 0 none;
     background: none;
+}
+
+.tag-box a
+{
+    font-size: 1.4rem;
+    line-height: 2rem; 
+
+    display: inline-block;
+
+    height: 2rem;
+    margin-right: .4rem;
+    padding: .1rem .5rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: .2rem;
+    background: #939ba6;
+    background: rgba(37, 54, 74, .5);
+}
+.tag-box a:hover,
+.tag-box a:active
+{
+    background: #677081;
+    background: rgba(37, 54, 74, .7);
+}
+.tag-box a .iconfont
+{
+    display: none;
 }
 
 .qr-code img
@@ -1880,24 +1909,6 @@ a.btn-post-excerpt
     margin: 0 1rem;
 }
 
-.toggle-comment h4
-{
-    display: block;
-
-    width: 10rem;
-    margin: 0 auto; 
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding: .5rem 1.6rem;
-
-    text-align: center;
-    letter-spacing: .5rem;
-
-    border: 2px solid #595959;
-    border-radius: .3rem;
-    background: rgba(255, 255, 255, .1);
-}
-
 #to-top
 {
     position: fixed;
@@ -2099,6 +2110,26 @@ a.btn-post-excerpt
     padding: 0 1.6rem; 
 
     background: #fff;
+}
+.comment-area h4
+{
+    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    font-style: italic;
+
+    display: block;
+
+    width: 10rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: .5rem 1.6rem;
+
+    text-align: center;
+    letter-spacing: .5rem;
+
+    color: #333;
+    border-radius: .3rem;
+    background: rgba(255, 255, 255, .1);
 }
 
 .comment-area.toggle-up
@@ -2984,6 +3015,11 @@ Copyright (c) 2014 Daniel Eden
     {
         font-size: 1rem;
     }
+    .archive-template #main,
+    .tag-template #main
+    {
+        margin: 0 auto;
+    }
     .archive-template #header,
     .tag-template #header
     {
@@ -3033,9 +3069,28 @@ Copyright (c) 2014 Daniel Eden
 
         opacity: .8;
     }
+    .tag-box a
+    {
+        font-size: 1.2rem;
+        line-height: 1.8rem; 
+
+        height: 1.8rem;
+        margin-right: .4rem;
+        padding: 0rem .3rem;
+
+        text-align: center;
+
+        color: #fff;
+        border-radius: .2rem;
+        background: rgba(37, 54, 74, .5);
+    }
     .nav-header-container
     {
         width: 80%;
+    }
+    .read-next
+    {
+        margin: 5rem auto 2rem;
     }
 }
 

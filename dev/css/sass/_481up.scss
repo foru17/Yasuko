@@ -125,6 +125,9 @@
 }
 .archive-template,
 .tag-template {
+    #main{
+                margin:0 auto;
+    }
     #header {
         height: 45%;
     }
@@ -168,6 +171,24 @@
     opacity: .8;
     top: 0rem;
 }
+
+.tag-box{
+    a{
+        padding:0rem .3rem;
+        border-radius:.2rem;
+        background:rgba(37,54,74,.5);
+        color:#fff;
+        text-align:center;
+        margin-right: .4rem;
+        font-size: 1.2rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+
+    }
+}
 .nav-header-container {
     width: 80%;
+}
+.read-next{
+    margin:5rem auto 2rem;
 }

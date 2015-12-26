@@ -735,7 +735,8 @@ h1 {
   font-size: 0;
   display: block; }
 
-.home-template #main, .archive-template #main {
+.home-template #main,
+.archive-template #main {
   max-width: 76rem; }
 
 .post-template #main {
@@ -999,7 +1000,7 @@ a.btn-post-excerpt {
 
 .single-post-inner {
   font-size: 1.8rem;
-  padding: 0rem 2.8% 1.6rem;
+  padding: 0rem 2.8% .8rem;
   overflow: hidden;
   border-bottom: 1px dashed #e5e5e5;
   font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -1102,6 +1103,24 @@ a.btn-post-excerpt {
       background: none;
       border: 0 none;
       line-height: 2rem; }
+
+.tag-box a {
+  display: inline-block;
+  padding: .1rem .5rem;
+  border-radius: .2rem;
+  background: #939BA6;
+  background: rgba(37, 54, 74, 0.5);
+  color: #fff;
+  text-align: center;
+  margin-right: .4rem;
+  font-size: 1.4rem;
+  height: 2rem;
+  line-height: 2rem; }
+  .tag-box a:hover, .tag-box a:active {
+    background: #677081;
+    background: rgba(37, 54, 74, 0.7); }
+  .tag-box a .iconfont {
+    display: none; }
 
 .qr-code img {
   display: block;
@@ -1289,19 +1308,6 @@ a.btn-post-excerpt {
       font-size: 4.8rem;
       margin: 0 1rem; }
 
-.toggle-comment h4 {
-  letter-spacing: .5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  display: block;
-  width: 10rem;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #595959;
-  padding: .5rem 1.6rem;
-  border-radius: .3rem;
-  margin: 0 auto; }
-
 #to-top {
   display: none;
   width: 48px;
@@ -1434,6 +1440,20 @@ a.btn-post-excerpt {
 .comment-area {
   background: #fff;
   padding: 0 1.6rem; }
+  .comment-area h4 {
+    letter-spacing: .5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    width: 10rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: .5rem 1.6rem;
+    border-radius: .3rem;
+    margin: 0 auto;
+    color: #333;
+    font-style: italic;
+    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .comment-area.toggle-up {
   display: block;
@@ -1971,6 +1991,9 @@ Copyright (c) 2014 Daniel Eden
     width: 90%; }
     .pagination a {
       font-size: 1rem; }
+  .archive-template #main,
+  .tag-template #main {
+    margin: 0 auto; }
   .archive-template #header,
   .tag-template #header {
     height: 45%; }
@@ -2000,8 +2023,20 @@ Copyright (c) 2014 Daniel Eden
   .svg-logo {
     opacity: .8;
     top: 0rem; }
+  .tag-box a {
+    padding: 0rem .3rem;
+    border-radius: .2rem;
+    background: rgba(37, 54, 74, 0.5);
+    color: #fff;
+    text-align: center;
+    margin-right: .4rem;
+    font-size: 1.2rem;
+    height: 1.8rem;
+    line-height: 1.8rem; }
   .nav-header-container {
-    width: 80%; } }
+    width: 80%; }
+  .read-next {
+    margin: 5rem auto 2rem; } }
 
 @media only screen and (max-width: 361px) {
   .site-footer {

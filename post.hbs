@@ -49,9 +49,13 @@
      <section class="post-content">
      <div class="single-post-inner">
         {{content}}
+ 
         <div class="qr-code">
             <img src="http://dev.xiaoyi.com/download/qr?content={{url absolute="true"}}" alt="">
             <p>扫描二维码,分享此文章</p>
+        </div>
+        <div class="tag-box">
+          {{tags prefix="" separator=" "}}
         </div>
      </div>
     </section>

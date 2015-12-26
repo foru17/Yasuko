@@ -150,24 +150,23 @@ h1 {
 .post-template .site-footer {
     margin-top: 13rem;
 }
-
-.wechat-only{
+.wechat-only {
     width: 0;
     height: 0;
     font-size: 0;
     display: block;
 }
-
 .home-header {
     // background: url(http://luoleiorg.b0.upaiyun.com/tmp/yasuko/bg.jpeg!/fw/750);
 }
-.home-template,.archive-template{
-    #main{
+.home-template,
+.archive-template {
+    #main {
         max-width: 76rem;
     }
 }
-.post-template{
-    #main{
+.post-template {
+    #main {
         max-width: 76rem;
     }
 }
@@ -471,7 +470,7 @@ a.btn-post-excerpt {
 }
 .single-post-inner {
     font-size: 1.8rem;
-    padding: 0rem 2.8% 1.6rem;
+    padding: 0rem 2.8% .8rem;
     overflow: hidden;
     border-bottom: 1px dashed #e5e5e5;
     font-family: $googleFontExo, $fontOSX;
@@ -602,6 +601,28 @@ a.btn-post-excerpt {
         }
     }
 }
+.tag-box {
+    a {
+        display: inline-block;
+        padding: .1rem .5rem;
+        border-radius: .2rem;
+        background:#939BA6;
+        background: rgba(37, 54, 74, .5);
+        color: #fff;
+        text-align: center;
+        margin-right: .4rem;
+        font-size: 1.4rem;
+        height: 2rem;
+        line-height: 2rem;
+        &:hover,&:active{
+            background: #677081;
+             background: rgba(37, 54, 74, .7);
+        }
+        .iconfont {
+            display: none;
+        }
+    }
+}
 .qr-code {
     img {
         display: block;
@@ -676,18 +697,19 @@ a.btn-post-excerpt {
     }
 }
 .svg-logo {
-     left: 0;
-     position: absolute;
-     top: 2rem;
-     // overflow: hidden;
+    left: 0;
+    position: absolute;
+    top: 2rem;
+    // overflow: hidden;
     // display: block;
     // float: left;
     // opacity: .6;
 }
-#svg-luolei{
-    fill:#333;
-    &:hover,&:active{
-        fill:#999;
+#svg-luolei {
+    fill: #333;
+    &:hover,
+    &:active {
+        fill: #999;
         opacity: .4;
     }
 }
@@ -822,21 +844,7 @@ a.btn-post-excerpt {
         }
     }
 }
-.toggle-comment {
-    h4 {
-        letter-spacing: .5rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        display: block;
-        width: 10rem;
-        text-align: center;
-        background: rgba(255, 255, 255, .1);
-        border: 2px solid #595959;
-        padding: .5rem 1.6rem;
-        border-radius: .3rem;
-        margin: 0 auto;
-    }
-}
+.toggle-comment {}
 #to-top {
     display: none;
     width: 48px;
@@ -982,6 +990,21 @@ a.btn-post-excerpt {
     // min-height: 10rem;
     background: #fff;
     padding: 0 1.6rem;
+    h4 {
+        letter-spacing: .5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: block;
+        width: 10rem;
+        text-align: center;
+        background: rgba(255, 255, 255, .1);
+        padding: .5rem 1.6rem;
+        border-radius: .3rem;
+        margin: 0 auto;
+        color: #333;
+        font-style: italic;
+        font-family: $fontOSX;
+    }
 }
 .comment-area.toggle-up {
     display: block;
