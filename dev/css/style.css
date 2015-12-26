@@ -1166,10 +1166,7 @@ a.btn-post-excerpt {
 .svg-logo {
   left: 0;
   position: absolute;
-  top: 2rem;
-  width: 3.4rem;
-  height: 3.4rem;
-  overflow: hidden; }
+  top: 2rem; }
 
 #svg-luolei {
   fill: #333; }
