@@ -45,7 +45,7 @@
 .iconfont-google {
     color: #176DEE
 }
-.iconfont-wikipedia{
+.iconfont-wikipedia {
     color: #626262;
 }
 .iconfont-weixin {
@@ -90,10 +90,15 @@
 .icon-weixin-pure {
     color: #75D140
 }
-.icon-instagram-pure,
-
-
-
+.iconfont-jianshu{
+    color:#e78170;
+}
+.iconfont-youku{
+    color:#06a7e1;
+}
+.iconfont-youtube{
+    color:#E52413;
+}
 /* 自定义IconFont CSS 才用:before的形式 */
 
 .single-post-inner {
@@ -107,7 +112,7 @@
         content: "\00e606";
     }
     .iconfont-weibo:before {
-        content: "\00e605";
+        content: "\00e607";
     }
     .iconfont-facebook:before {
         content: "\00e601";
@@ -116,7 +121,7 @@
         content: "\00e602";
     }
     .iconfont-github:before {
-        content: "\00e60a";
+        content: "\00e60d";
     }
     .iconfont-douban:before {
         content: "\0e600";
@@ -133,4 +138,17 @@
     .iconfont-wikipedia:before {
         content: '\00e608'
     }
+    .iconfont-jianshu:before {
+        content: '\00e60b'
+    }
+    .iconfont-youku:before {
+        content: '\00e60c'
+    }
+    .iconfont-youtube:before {
+        content: '\00e60a'
+    }
+    .iconfont-luolei:before {
+        content: '\00e60e'
+    }
 }
+

@@ -71,9 +71,9 @@
         font-size: 2rem;
         font-family: $fontOSX;
         &.btn-post-excerpt {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             line-height: 1.8rem;
-            margin-top: 1.3rem;
+            margin-top: 1.5rem;
         }
     }
     .post-short-intro{
@@ -149,8 +149,8 @@
 .site-footer {
     margin-top: 3rem;
 }
-.home-logo {
-    opacity: .5;
+.home-logo,.svg-logo {
+    opacity: .8;
     top: 0rem;
 }
 .nav-header-container {

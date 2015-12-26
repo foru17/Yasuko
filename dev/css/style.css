@@ -811,6 +811,14 @@ h1 {
   height: auto;
   border: 0 none;
   font-size: 0; }
+  .post-in-list .post-excerpt img.loading {
+    background: #efefef;
+    visibility: hidden; }
+
+.post-excerpt {
+  display: block;
+  background: #333;
+  background: rgba(29, 29, 29, 0.8); }
 
 .info-mask {
   width: 100%;
@@ -876,6 +884,10 @@ h1 {
   .post-excerpt-mirror-mask .mask-wrapper {
     z-index: 1024;
     position: relative; }
+  .post-excerpt-mirror-mask img.loading {
+    visibility: hidden; }
+  .post-excerpt-mirror-mask img.lazy {
+    display: block; }
 
 .excert-detail-container {
   width: 90%;
@@ -1014,7 +1026,8 @@ a.btn-post-excerpt {
     line-height: 2.8rem;
     font-size: 1.6rem;
     font-family: "Exo", sans-serif;
-    vertical-align: top; }
+    vertical-align: top;
+    white-space: nowrap; }
     .single-post-inner a .iconfont {
       line-height: 2.8rem;
       padding-right: .3rem;
@@ -1120,6 +1133,7 @@ a.btn-post-excerpt {
   border-radius: 0;
   color: #fff;
   font-size: 2.2rem;
+  font-weight: bold;
   left: 0;
   line-height: 4rem;
   width: 4rem;
@@ -1148,6 +1162,20 @@ a.btn-post-excerpt {
   z-index: 99; }
   .back-home:active {
     background: rgba(0, 0, 0, 0.1); }
+
+.svg-logo {
+  left: 0;
+  position: absolute;
+  top: 2rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  overflow: hidden; }
+
+#svg-luolei {
+  fill: #333; }
+  #svg-luolei:hover, #svg-luolei:active {
+    fill: #999;
+    opacity: .4; }
 
 .home-info-container {
   margin-top: 18rem; }
@@ -1691,53 +1719,63 @@ Copyright (c) 2014 Daniel Eden
 .icon-weixin-pure {
   color: #75D140; }
 
-.icon-instagram-pure .iconfont-local:before,
+.iconfont-jianshu {
+  color: #e78170; }
+
+.iconfont-youku {
+  color: #06a7e1; }
+
+.iconfont-youtube {
+  color: #E52413; }
+
+/* 自定义IconFont CSS 才用:before的形式 */
 .single-post-inner .iconfont-local:before {
   content: "\0f00ac"; }
 
-.icon-instagram-pure .iconfont-twitter:before,
 .single-post-inner .iconfont-twitter:before {
   content: "\00e604"; }
 
-.icon-instagram-pure .iconfont-wechat:before,
 .single-post-inner .iconfont-wechat:before {
   content: "\00e606"; }
 
-.icon-instagram-pure .iconfont-weibo:before,
 .single-post-inner .iconfont-weibo:before {
-  content: "\00e605"; }
+  content: "\00e607"; }
 
-.icon-instagram-pure .iconfont-facebook:before,
 .single-post-inner .iconfont-facebook:before {
   content: "\00e601"; }
 
-.icon-instagram-pure .iconfont-google:before,
 .single-post-inner .iconfont-google:before {
   content: "\00e602"; }
 
-.icon-instagram-pure .iconfont-github:before,
 .single-post-inner .iconfont-github:before {
-  content: "\00e60a"; }
+  content: "\00e60d"; }
 
-.icon-instagram-pure .iconfont-douban:before,
 .single-post-inner .iconfont-douban:before {
   content: "\0e600"; }
 
-.icon-instagram-pure .iconfont-luolei:before,
 .single-post-inner .iconfont-luolei:before {
   content: "\0"; }
 
-.icon-instagram-pure .iconfont-v2ex:before,
 .single-post-inner .iconfont-v2ex:before {
   content: "\00e605"; }
 
-.icon-instagram-pure .iconfont-zhihu:before,
 .single-post-inner .iconfont-zhihu:before {
   content: '\00e609'; }
 
-.icon-instagram-pure .iconfont-wikipedia:before,
 .single-post-inner .iconfont-wikipedia:before {
   content: '\00e608'; }
+
+.single-post-inner .iconfont-jianshu:before {
+  content: '\00e60b'; }
+
+.single-post-inner .iconfont-youku:before {
+  content: '\00e60c'; }
+
+.single-post-inner .iconfont-youtube:before {
+  content: '\00e60a'; }
+
+.single-post-inner .iconfont-luolei:before {
+  content: '\00e60e'; }
 
 .yasuko-only #ds-reset .ds-avatar img {
   width: 54px;
@@ -1888,9 +1926,9 @@ Copyright (c) 2014 Daniel Eden
     font-size: 2rem;
     font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     .post-excerpt-mirror a.btn-post-excerpt {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       line-height: 1.8rem;
-      margin-top: 1.3rem; }
+      margin-top: 1.5rem; }
   .post-excerpt-mirror .post-short-intro {
     font-size: 1.4rem;
     line-height: 2rem;
@@ -1940,8 +1978,8 @@ Copyright (c) 2014 Daniel Eden
       margin-left: 0; }
   .site-footer {
     margin-top: 3rem; }
-  .home-logo {
-    opacity: .5;
+  .home-logo, .svg-logo {
+    opacity: .8;
     top: 0rem; }
   .nav-header-container {
     width: 80%; } }

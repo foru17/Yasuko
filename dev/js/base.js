@@ -52,6 +52,17 @@ function loadJS(url, callback, el) {
     }
 };
 
+/** 
+* Yasuko 配置文件
+* 多说评论调用等
+*/
+
+var duoshuoQuery = {short_name:"luolei"};
+
+var GlobalConfigue = {
+    duoshuoDomain:'https://luolei.org',
+}
+
 
 var General = {
     isMobile: false,
@@ -170,7 +181,10 @@ var General = {
             'dribble': iconFontTag + '-dribble',
             'v2ex': iconFontTag + '-v2ex',
             'zhihu': iconFontTag + '-zhihu',
-            'wikipedia': iconFontTag + '-wikipedia'
+            'wikipedia': iconFontTag + '-wikipedia',
+            'jianshu': iconFontTag + '-jianshu',
+            'youku': iconFontTag + '-youku',
+            'youtube': iconFontTag + '-youtube'
 
         }
 
@@ -195,7 +209,6 @@ var General = {
             _selfDomain = tmp.hostname;
             General.urlIconlize(_selfDomain);
             console.log(_selfDomain);
-            //$(this).append(urlIconlize(_selfDomain));
             $(this).prepend('<i class="iconfont ' + General.urlIconlize(_selfDomain) + '"></i>');
             var _selfColor = $(this).find('i').css('color'),
                 _originalColor = $(this).css('color');
@@ -212,10 +225,9 @@ var General = {
         });
     },
     commentLoader: function() {
-        var dataThreadKey = location.protocol + '//' + location.host + location.pathname;
+        var dataThreadKey = GlobalConfigue.duoshuoDomain + location.pathname;
         $(window).scroll(function() {
             if ($('.comment-area').has('div').length > 0) {
-                console.log('已经有了');
                 return false
             } else {
                 console.log('增加评论');
@@ -228,7 +240,6 @@ var General = {
                         el.setAttribute('data-title', $('title').html());
                         DUOSHUO.EmbedThread(el);
                         scrollStop = true;
-                        console.log('停止标记');
                         setTimeout(function() {
                             $('.comment-area').append(el);
                         }, 250)
@@ -254,9 +265,8 @@ var ImageSmartLoader = {
     },
     webPCheck: function(feature, callback) {
         var TestImages = {
-                demo: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="
-            };
-        // !localStorage.getItem(name) || (localStorage.getItem(name) !== 'available' && localStorage.getItem(name) !== 'disable')
+            demo: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="
+        };
         console.log('支持Webp哦');
         var img = new Image();
         img.onload = function() {
@@ -268,10 +278,8 @@ var ImageSmartLoader = {
         };
         img.onerror = function() {
             console.log('不支持Webp');
-
             ImageSmartLoader.isWebPSupported = false;
             ImageSmartLoader.webPLoader();
-            // callback(feature, false);
         };
         img.src = "data:image/webp;base64," + TestImages['demo'];
 
