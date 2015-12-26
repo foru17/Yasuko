@@ -997,6 +997,17 @@ h1
     margin-top: 13rem;
 }
 
+.home-template #main,
+.archive-template #main
+{
+    max-width: 76rem;
+}
+
+.post-template #main
+{
+    max-width: 76rem;
+}
+
 .blog-background
 {
     background-repeat: no-repeat;
@@ -1065,7 +1076,7 @@ h1
 .archive-template #main,
 .tag-template #main
 {
-    margin: 0rem auto;
+    margin: 2rem auto;
 }
 
 #main
@@ -1375,11 +1386,11 @@ a.btn-post-excerpt
 
     color: #fff;
     border-radius: .3rem;
-    background: rgba(59, 59, 59, .5);
+    background: rgba(59, 59, 59, .7);
 }
 .pagination a:hover
 {
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .5);
 }
 
 .page-number
@@ -1610,7 +1621,7 @@ a.btn-post-excerpt
     position: relative;
 
     width: 74%;
-    max-width: 86rem;
+    max-width: 76rem;
     height: 2rem;
     margin: 0 auto;
 }

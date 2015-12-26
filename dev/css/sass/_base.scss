@@ -153,7 +153,16 @@ h1 {
 .home-header {
     // background: url(http://luoleiorg.b0.upaiyun.com/tmp/yasuko/bg.jpeg!/fw/750);
 }
-.home-template {}
+.home-template,.archive-template{
+    #main{
+        max-width: 76rem;
+    }
+}
+.post-template{
+    #main{
+        max-width: 76rem;
+    }
+}
 .home-footer {}
 .blog-background {
     background-repeat: no-repeat;
@@ -209,7 +218,7 @@ h1 {
 .home-template #main,
 .archive-template #main,
 .tag-template #main {
-    margin: 0rem auto;
+    margin: 2rem auto;
 }
 .archive-template {
     .arrow_down {
@@ -432,12 +441,12 @@ a.btn-post-excerpt {
         display: inline-block;
         text-align: center;
         color: #fff;
-        background: rgba(59, 59, 59, 0.5);
+        background: rgba(59, 59, 59, 0.7);
         height: 2.4rem;
         line-height: 2.4rem;
         padding: .3rem .8rem;
         &:hover {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.5);
         }
     }
 }
@@ -615,7 +624,7 @@ a.btn-post-excerpt {
     position: relative;
     height: 2rem;
     width: 74%;
-    max-width: 86rem;
+    max-width: 76rem;
     margin: 0 auto;
 }
 .header-wrap {

@@ -729,6 +729,12 @@ h1 {
 .post-template .site-footer {
   margin-top: 13rem; }
 
+.home-template #main, .archive-template #main {
+  max-width: 76rem; }
+
+.post-template #main {
+  max-width: 76rem; }
+
 .blog-background {
   background-repeat: no-repeat;
   background-position: center;
@@ -779,7 +785,7 @@ h1 {
 .home-template #main,
 .archive-template #main,
 .tag-template #main {
-  margin: 0rem auto; }
+  margin: 2rem auto; }
 
 #main {
   position: relative;
@@ -973,12 +979,12 @@ a.btn-post-excerpt {
     display: inline-block;
     text-align: center;
     color: #fff;
-    background: rgba(59, 59, 59, 0.5);
+    background: rgba(59, 59, 59, 0.7);
     height: 2.4rem;
     line-height: 2.4rem;
     padding: .3rem .8rem; }
     .pagination a:hover {
-      background: rgba(0, 0, 0, 0.2); }
+      background: rgba(0, 0, 0, 0.5); }
 
 .page-number {
   font-size: 1.4rem;
@@ -1117,7 +1123,7 @@ a.btn-post-excerpt {
   position: relative;
   height: 2rem;
   width: 74%;
-  max-width: 86rem;
+  max-width: 76rem;
   margin: 0 auto; }
 
 .header-wrap {
