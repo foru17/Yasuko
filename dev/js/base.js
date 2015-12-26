@@ -291,7 +291,8 @@ var ImageSmartLoader = {
         console.log('加载webP');
         // alert(ImageSmartLoader.isWebPSupported);
         if (ImageSmartLoader.isWebPSupported == true) {
-            if (General.viewWidth <= 1024) {
+                console.log('宽度是' + General.viewWidth);
+            if (General.viewWidth < 768) {
                 $(".lazy").lazyload({
                     advanced_load: true,
                     data_attribute: 'url',
