@@ -1460,8 +1460,7 @@ a.btn-post-excerpt
 
     padding: 0 .5rem;
 
-    vertical-align: top;
-    white-space: nowrap; 
+    vertical-align: top; 
 
     color: #54b5db;
 }
@@ -2892,6 +2891,8 @@ Copyright (c) 2014 Daniel Eden
     {
         display: block;
         overflow: hidden;
+
+        height: 20rem;
     }
     .post-excerpt-mirror a
     {
