@@ -75,7 +75,7 @@ h1 {
     width: 100%;
     height: 60%;
     max-height: 52rem;
-    padding: 24px 0;
+    padding: 2rem 0;
     // margin-bottom: 72px;
     box-sizing: border-box;
     z-index: 0;
@@ -725,14 +725,12 @@ a.btn-post-excerpt {
 .post-page-time {
     display: inline-block;
     float: left;
-    font-family: $fontOSX;
-    // padding-bottom: 1rem;
+    font-family: $googleFontExo, $fontOSX;
     text-align: left;
-    // margin-top: 1rem;
     height: 2rem;
     line-height: 2rem;
     font-size: 1.6rem;
-    color: #fff;
+    color: #efefef;
 }
 .post-page-author {
     display: inline-block;
@@ -760,7 +758,7 @@ a.btn-post-excerpt {
     @include word-wrap-multi;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 // .share-fixed{
