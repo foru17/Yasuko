@@ -1010,12 +1010,12 @@ h1
 .home-template #main,
 .archive-template #main
 {
-    max-width: 76rem;
+    max-width: 76.8rem;
 }
 
 .post-template #main
 {
-    max-width: 76rem;
+    max-width: 76.8rem;
 }
 
 .blog-background
@@ -1660,7 +1660,7 @@ a.btn-post-excerpt
     position: relative;
 
     width: 74%;
-    max-width: 76rem;
+    max-width: 76.8rem;
     height: 2rem;
     margin: 0 auto;
 }

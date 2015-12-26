@@ -737,10 +737,10 @@ h1 {
 
 .home-template #main,
 .archive-template #main {
-  max-width: 76rem; }
+  max-width: 76.8rem; }
 
 .post-template #main {
-  max-width: 76rem; }
+  max-width: 76.8rem; }
 
 .blog-background {
   background-repeat: no-repeat;
@@ -1148,7 +1148,7 @@ a.btn-post-excerpt {
   position: relative;
   height: 2rem;
   width: 74%;
-  max-width: 76rem;
+  max-width: 76.8rem;
   margin: 0 auto; }
 
 .header-wrap {
