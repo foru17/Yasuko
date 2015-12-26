@@ -997,6 +997,16 @@ h1
     margin-top: 13rem;
 }
 
+.wechat-only
+{
+    font-size: 0;
+
+    display: block; 
+
+    width: 0;
+    height: 0;
+}
+
 .home-template #main,
 .archive-template #main
 {

@@ -729,6 +729,12 @@ h1 {
 .post-template .site-footer {
   margin-top: 13rem; }
 
+.wechat-only {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  display: block; }
+
 .home-template #main, .archive-template #main {
   max-width: 76rem; }
 
