@@ -209,11 +209,11 @@ h1 {
 .home-template #main,
 .archive-template #main,
 .tag-template #main {
-    margin: 2rem auto;
+    margin: 0rem auto;
 }
 .archive-template {
     .arrow_down {
-        display: none;
+        // display: none;
     }
 }
 .content {}
@@ -313,7 +313,7 @@ h1 {
     display: none;
     position: relative;
     // background: #666;
-    height: 100%;
+    // height: 100%;
     width: 100%;
     z-index: 2;
     &:after {

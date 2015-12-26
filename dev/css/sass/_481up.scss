@@ -17,7 +17,7 @@
 }
 .post-info-container {
     width: 84%;
-    margin:3rem auto 2rem;
+    margin: 3rem auto 2rem;
     padding: 2rem 0;
 }
 .header-wrap {
@@ -31,7 +31,6 @@
     height: 6rem;
 }
 .post-title {
-
     margin: 0.2rem 0;
     line-height: 2.2rem;
     a {}
@@ -81,7 +80,7 @@
             margin-top: 1.5rem;
         }
     }
-    .post-short-intro{
+    .post-short-intro {
         font-size: 1.4rem;
         line-height: 2rem;
         max-height: 4rem;
@@ -112,13 +111,12 @@
         letter-spacing: .5rem;
     }
 }
-.back-home{
+.back-home {
     top: .2rem;
 }
-.arrow_down{
-    bottom:3rem;
+.arrow_down {
+    bottom: 3rem;
 }
-
 .pagination {
     width: 90%;
     a {
@@ -131,7 +129,7 @@
         height: 45%;
     }
     .home-info-container {
-        margin-top: 6rem;
+        margin-top: 10rem;
         h2,
         h4 {
             &:hover {}
@@ -141,7 +139,11 @@
             font-size: 3.2rem;
         }
         h4 {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
+            -webkit-animation-name: shine;
+            -webkit-animation-duration: 3.5s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
         }
     }
 }
@@ -161,7 +163,8 @@
 .site-footer {
     margin-top: 3rem;
 }
-.home-logo,.svg-logo {
+.home-logo,
+.svg-logo {
     opacity: .8;
     top: 0rem;
 }

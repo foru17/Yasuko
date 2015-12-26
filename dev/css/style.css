@@ -779,10 +779,7 @@ h1 {
 .home-template #main,
 .archive-template #main,
 .tag-template #main {
-  margin: 2rem auto; }
-
-.archive-template .arrow_down {
-  display: none; }
+  margin: 0rem auto; }
 
 #main {
   position: relative;
@@ -868,7 +865,6 @@ h1 {
 .post-excerpt-mirror-mask {
   display: none;
   position: relative;
-  height: 100%;
   width: 100%;
   z-index: 2; }
   .post-excerpt-mirror-mask:after {
@@ -1968,13 +1964,17 @@ Copyright (c) 2014 Daniel Eden
     height: 45%; }
   .archive-template .home-info-container,
   .tag-template .home-info-container {
-    margin-top: 6rem; }
+    margin-top: 10rem; }
     .archive-template .home-info-container h2,
     .tag-template .home-info-container h2 {
       font-size: 3.2rem; }
     .archive-template .home-info-container h4,
     .tag-template .home-info-container h4 {
-      font-size: 1.2rem; }
+      font-size: 1.8rem;
+      -webkit-animation-name: shine;
+      -webkit-animation-duration: 3.5s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite; }
   .info-mask {
     display: none; }
   .post-meta span.post-tags {
@@ -1984,7 +1984,8 @@ Copyright (c) 2014 Daniel Eden
       margin-left: 0; }
   .site-footer {
     margin-top: 3rem; }
-  .home-logo, .svg-logo {
+  .home-logo,
+  .svg-logo {
     opacity: .8;
     top: 0rem; }
   .nav-header-container {
