@@ -53,14 +53,16 @@ function loadJS(url, callback, el) {
 };
 
 /** 
-* Yasuko 配置文件
-* 多说评论调用等
-*/
+ * Yasuko 配置文件
+ * 多说评论调用等
+ */
 
-var duoshuoQuery = {short_name:"luolei"};
+var duoshuoQuery = {
+    short_name: "luolei"
+};
 
 var GlobalConfigue = {
-    duoshuoDomain:'https://luolei.org',
+    duoshuoDomain: 'https://luolei.org',
 }
 
 
@@ -231,7 +233,7 @@ var General = {
                 return false
             } else {
                 console.log('增加评论');
-                if ($('.author-image').isOnScreenVisible() && $('.author-image').hasClass('duoshuo-loaded') == false) {
+                if ( ($('.author-image').isOnScreenVisible() || $($('.read-next').isOnScreenVisible())) && $('.author-image').hasClass('duoshuo-loaded') == false) {
                     $('.author-image').addClass('duoshuo-loaded');
                     loadJS('https://static.duoshuo.com/embed.js', function() {
                         var el = document.createElement('div');
@@ -291,7 +293,7 @@ var ImageSmartLoader = {
         console.log('加载webP');
         // alert(ImageSmartLoader.isWebPSupported);
         if (ImageSmartLoader.isWebPSupported == true) {
-                console.log('宽度是' + General.viewWidth);
+            console.log('宽度是' + General.viewWidth);
             if (General.viewWidth < 768) {
                 $(".lazy").lazyload({
                     advanced_load: true,
