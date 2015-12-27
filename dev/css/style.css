@@ -2005,11 +2005,12 @@ Copyright (c) 2014 Daniel Eden
       font-size: 3.2rem; }
     .archive-template .home-info-container h4,
     .tag-template .home-info-container h4 {
-      font-size: 1.8rem;
-      -webkit-animation-name: shine;
-      -webkit-animation-duration: 3.5s;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation-iteration-count: infinite; }
+      font-size: 1.8rem; }
+  .tag-template .home-info-container h4 {
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 3.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite; }
   .info-mask {
     display: none; }
   .post-meta span.post-tags {

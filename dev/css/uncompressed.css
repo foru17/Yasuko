@@ -3039,7 +3039,9 @@ Copyright (c) 2014 Daniel Eden
     .tag-template .home-info-container h4
     {
         font-size: 1.8rem;
-
+    }
+    .tag-template .home-info-container h4
+    {
         -webkit-animation-name: shine;
         -webkit-animation-duration: 3.5s;
         -webkit-animation-timing-function: linear;

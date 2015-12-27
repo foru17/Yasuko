@@ -227,6 +227,9 @@ var General = {
         });
     },
     commentLoader: function() {
+        if(!$('body').hasClass('post-template')){
+            return false;
+        }
         var dataThreadKey = GlobalConfigue.duoshuoDomain + location.pathname;
         $(window).scroll(function() {
             if ($('.comment-area').has('div').length > 0) {

@@ -1,8 +1,7 @@
-# Casper
+# Yasuko
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+一个主题
 
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
 
 ## Copyright & License
 
