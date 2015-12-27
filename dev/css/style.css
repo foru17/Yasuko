@@ -1954,6 +1954,10 @@ Copyright (c) 2014 Daniel Eden
   .read-next-story.no-cover + .read-next-story.no-cover {
     border-top: rgba(0, 0, 100, 0.06) 1px solid;
     border-left: none; }
+  .wechat-webview .qr-code {
+    display: none; }
+  .wechat-webview .money-like {
+    padding: 3rem 0; }
   .wechat-webview .money-code {
     width: 14rem;
     height: 13rem;

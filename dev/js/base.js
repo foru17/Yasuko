@@ -243,7 +243,8 @@ var General = {
         }
         var loadQRUrl;
         if(!!General.isWechat){
-            $('.wechat-code b').html('长按上方二维码打赏作者')
+            $('.wechat-code b').html('长按上方二维码打赏作者');
+             // $('.qr-code').fadeOut();
         }
 
         $('.money-like .reward-button').hover(function() {
@@ -263,6 +264,7 @@ var General = {
                     $(this).find('img.alipay-img').attr('src', loadQR.alipay);
                     $('.money-code').fadeOut();
                     $(this).removeClass('active');
+                    
                 } else {
                     $('.money-code').fadeIn();
                     $(this).addClass('active');

@@ -55,6 +55,12 @@
     border-left: none;
 }
 .wechat-webview {
+    .qr-code{
+        display: none;
+    }
+    .money-like{
+        padding:3rem 0;
+    }
     .money-code {
         width: 14rem;
         height: 13rem;
