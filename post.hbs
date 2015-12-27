@@ -16,7 +16,6 @@
         <div class="nav-header">
         <div class="nav-header-container">
              <a href="{{@blog.url}}" class="back-home">Home</a>
-
         </div>
 
         </div>
@@ -30,7 +29,6 @@
                 <span class="post-page-tags">
                     {{tags prefix="" separator=" "}}
                </span>
-
             </div>
 
         </div>
@@ -49,13 +47,26 @@
      <section class="post-content">
      <div class="single-post-inner">
         {{content}}
- 
+        <div class="tag-box">
+          {{tags prefix="" separator=" "}}
+        </div>
+        <div class="money-like" id="like-money">
+            <div class="reward-button">赏
+            <span class="money-code">
+            <span class="alipay-code">
+                <img data-url="{{asset "images/qr-alipay-256.png"}}" class="alipay-img" src="data:image/gif;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="><b>支付宝扫码打赏</b>
+            </span>
+            <span class="wechat-code">
+                <img data-url="{{asset "images/qr-wechat-256.png"}}" class="wechat-img" src="data:image/gif;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="><b>微信打赏</b>
+            </span>
+            </span>
+
+            </div>
+
+        </div>
         <div class="qr-code">
             <img src="http://dev.xiaoyi.com/download/qr?content={{url absolute="true"}}" alt="">
             <p>扫描二维码,分享此文章</p>
-        </div>
-        <div class="tag-box">
-          {{tags prefix="" separator=" "}}
         </div>
      </div>
     </section>

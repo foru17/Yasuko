@@ -1,51 +1,38 @@
-
 // $imgPath:"../../img";
 $imgPath:"../../assets/images";
 $fontPath:"../../assets/fonts";
-
-
-$fontBase:"Helvetica Neue",\5FAE\8F6F\96C5\9ED1,Tohoma;
-$fontOSX:"-apple-system","Open Sans","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
-$fontIOS:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight";
-
+$fontBase:"Helvetica Neue", \5FAE\8F6F\96C5\9ED1, Tohoma;
+$fontOSX:"-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontIOS:"HelveticaNeue-UltraLight", "Helvetica Neue UltraLight";
 $googleFontExo:"Exo";
 // 设置精灵图资源路径,把路径以变量形式控制，方便处理多个精灵。
 $sprite-normal: '../images/sprite.png';
 $sprite-retina: '../images/sprite@2x.png';
-
-
 @mixin word-wrap {
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
-@mixin word-wrap-multi{
-white-space: normal;
-overflow: hidden;
-text-overflow: ellipsis;
+@mixin word-wrap-multi {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
-
 // 处理高清精灵自定义函数
 @mixin retina-image-width($sprite) {
     width: nth($sprite, 5)/2;
 }
-
 @mixin retina-image-height($sprite) {
     height: nth($sprite, 6)/2;
 }
-
 @mixin retina-sprite-position($sprite) {
     $sprite-offset-x: nth($sprite, 3)/2;
     $sprite-offset-y: nth($sprite, 4)/2;
-      background-position: $sprite-offset-x  $sprite-offset-y;
+    background-position: $sprite-offset-x $sprite-offset-y;
 }
-
 @mixin retina-sprite-size($sprite) {
     background-size: nth($sprite, 7)/2;
 }
-
 
 /*
 参考 _sprite.scss  的代码
@@ -53,12 +40,11 @@ text-overflow: ellipsis;
 
 //处理高清精灵自定义函数
 @mixin retina-image($sprite) {
-        @include retina-image-height($sprite);
-        @include retina-image-width($sprite);
-        @include retina-sprite-position($sprite);
-        @include retina-sprite-size($sprite);
+    @include retina-image-height($sprite);
+    @include retina-image-width($sprite);
+    @include retina-sprite-position($sprite);
+    @include retina-sprite-size($sprite);
 }
-
 
 /*
 在css中，直接@include即可

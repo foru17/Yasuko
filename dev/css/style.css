@@ -589,8 +589,7 @@ div.prism-show-language > div.prism-show-language-label[data-language] {
   -o-transform: none;
   transform: none; }
 
-body,
-html {
+body, html {
   width: 100%;
   min-height: 100%;
   height: 100%;
@@ -608,12 +607,7 @@ html {
 a {
   text-decoration: none; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
@@ -640,8 +634,7 @@ h1 {
   line-height: 3.8rem;
   margin-bottom: .5rem; }
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   display: table; }
 
@@ -735,8 +728,7 @@ h1 {
   font-size: 0;
   display: block; }
 
-.home-template #main,
-.archive-template #main {
+.home-template #main, .archive-template #main {
   max-width: 76.8rem; }
 
 .post-template #main {
@@ -789,9 +781,7 @@ h1 {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite; }
 
-.home-template #main,
-.archive-template #main,
-.tag-template #main {
+.home-template #main, .archive-template #main, .tag-template #main {
   margin: 2rem auto; }
 
 #main {
@@ -1051,26 +1041,13 @@ a.btn-post-excerpt {
     padding: 0;
     -webkit-transition: padding 0.15s linear;
     transition: padding 0.15s linear; }
-  .single-post-inner h1,
-  .single-post-inner h2,
-  .single-post-inner h3,
-  .single-post-inner h4,
-  .single-post-inner h5,
-  .single-post-inner h6,
-  .single-post-inner pre,
-  .single-post-inner code {
+  .single-post-inner h1, .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h5, .single-post-inner h6, .single-post-inner pre, .single-post-inner code {
     color: #595959; }
-  .single-post-inner h2,
-  .single-post-inner h3,
-  .single-post-inner h4,
-  .single-post-inner h6 {
+  .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h6 {
     margin-top: .5rem;
     position: relative;
     text-indent: 1.2em; }
-    .single-post-inner h2:before,
-    .single-post-inner h3:before,
-    .single-post-inner h4:before,
-    .single-post-inner h6:before {
+    .single-post-inner h2:before, .single-post-inner h3:before, .single-post-inner h4:before, .single-post-inner h6:before {
       display: block;
       position: absolute;
       content: '#';
@@ -1092,9 +1069,7 @@ a.btn-post-excerpt {
     padding-left: 1rem; }
   .single-post-inner hr {
     border: 1px solid #efefef; }
-  .single-post-inner iframe,
-  .single-post-inner frame,
-  .single-post-inner video {
+  .single-post-inner iframe, .single-post-inner frame, .single-post-inner video {
     max-width: 100%;
     height: auto; }
   .single-post-inner pre {
@@ -1121,6 +1096,81 @@ a.btn-post-excerpt {
     background: rgba(37, 54, 74, 0.7); }
   .tag-box a .iconfont {
     display: none; }
+
+.money-like {
+  padding: 2rem 0 3rem; }
+  .money-like .reward-button {
+    display: block;
+    height: 4.6rem;
+    width: 4.6rem;
+    margin: 0 auto;
+    line-height: 4.6rem;
+    padding: 0;
+    border: 1px solid #f1b60e;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2.4rem;
+    background: #fccd60;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fccd60), color-stop(100%, #fbae12), color-stop(100%, #2989d8), color-stop(100%, #207cca));
+    background: -webkit-linear-gradient(top, #fccd60 0%, #fbae12 100%, #2989d8 100%, #207cca 100%);
+    background: linear-gradient(to bottom, #fccd60 0%, #fbae12 100%, #2989d8 100%, #207cca 100%);
+    position: relative;
+    -webkit-user-select: none; }
+  .money-like .money-code {
+    display: none;
+    padding: 1.2rem 1.2rem 3rem;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    position: absolute;
+    width: 22rem;
+    height: 10rem;
+    left: 50%;
+    margin-left: -12.2rem;
+    top: -16rem;
+    box-shadow: 0 1px 1px 1px #efefef; }
+    .money-like .money-code span {
+      display: inline-block;
+      width: 10rem;
+      height: 12rem; }
+      .money-like .money-code span.alipay-code {
+        float: left; }
+      .money-like .money-code span.wechat-code {
+        float: right; }
+    .money-like .money-code img {
+      display: inline-block;
+      float: left;
+      width: 10rem;
+      height: 10rem;
+      margin: 0rem auto;
+      border: 0 none; }
+    .money-like .money-code b {
+      display: block;
+      line-height: 2.6rem;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 0;
+      color: #666; }
+      .money-like .money-code b.notice {
+        color: #999;
+        line-height: 2rem;
+        margin-top: -1rem; }
+    .money-like .money-code:after, .money-like .money-code:before {
+      position: absolute;
+      content: "";
+      border: 10px solid transparent; }
+    .money-like .money-code:after {
+      border-top-color: #fff;
+      left: 50%;
+      margin-left: -10px;
+      bottom: -19px; }
+    .money-like .money-code:before {
+      border-top-color: #e6e6e6;
+      left: 50%;
+      margin-left: -10px;
+      bottom: -20px; }
 
 .qr-code img {
   display: block;
@@ -1202,14 +1252,12 @@ a.btn-post-excerpt {
 
 .home-info-container {
   margin-top: 16rem; }
-  .home-info-container h2,
-  .home-info-container h4 {
+  .home-info-container h2, .home-info-container h4 {
     color: #fff;
     font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     text-shadow: 0 1px 1px #595959; }
-    .home-info-container h2:hover,
-    .home-info-container h4:hover {
+    .home-info-container h2:hover, .home-info-container h4:hover {
       color: #efefef;
       text-shadow: 0 1px 1px #000; }
   .home-info-container h2 {
@@ -1905,7 +1953,25 @@ Copyright (c) 2014 Daniel Eden
     padding: 0 1rem; }
   .read-next-story.no-cover + .read-next-story.no-cover {
     border-top: rgba(0, 0, 100, 0.06) 1px solid;
-    border-left: none; } }
+    border-left: none; }
+  .wechat-webview .money-code {
+    width: 14rem;
+    height: 13rem;
+    margin-left: -8.2rem;
+    top: -19rem; }
+    .wechat-webview .money-code span {
+      width: auto;
+      height: auto; }
+      .wechat-webview .money-code span.wechat-code {
+        float: none; }
+    .wechat-webview .money-code img {
+      display: block;
+      width: 13.5rem;
+      height: 13.5rem; }
+    .wechat-webview .money-code b {
+      font-size: 1.2rem; }
+  .wechat-webview .alipay-code {
+    display: none !important; } }
 
 @media only screen and (max-width: 481px) {
   #header {

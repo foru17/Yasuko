@@ -54,3 +54,29 @@
     border-top: rgba(0, 0, 100, 0.06) 1px solid;
     border-left: none;
 }
+.wechat-webview {
+    .money-code {
+        width: 14rem;
+        height: 13rem;
+        margin-left: -8.2rem;
+        top: -19rem;
+        span {
+            width: auto;
+            height: auto;
+            &.wechat-code {
+                float: none;
+            }
+        }
+        img {
+            display: block;
+            width: 13.5rem;
+            height: 13.5rem;
+        }
+        b{
+            font-size: 1.2rem;
+        }
+    }
+    .alipay-code {
+        display: none !important;
+    }
+}

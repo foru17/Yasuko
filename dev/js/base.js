@@ -77,8 +77,16 @@ var General = {
         var UA = navigator.userAgent.toLowerCase()
         var isAndroid = win.navigator.appVersion.match(/android/gi);
         var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+        if (UA.match(/MicroMessenger/i) == "micromessenger") {
+            General.isWechat = true;
+            $('body').addClass('wechat-webview')
+        }
+        if (!!isAndroid) {
+            General.isMobile = true;
+        }
         if ($('body').hasClass('post-template')) {
             General.updateImageWidth();
+            General.rewardLoader();
         }
 
         General.webFontLoader();
@@ -226,8 +234,45 @@ var General = {
 
         });
     },
+    //打赏
+    rewardLoader: function() {
+
+        var loadQR = {
+            alipay: '/assets/images/qr-alipay-256.png',
+            wechat: '/assets/images/qr-wechat-256.png'
+        }
+        var loadQRUrl;
+        if(!!General.isWechat){
+            $('.wechat-code b').html('长按上方二维码打赏作者')
+        }
+
+        $('.money-like .reward-button').hover(function() {
+            console.log('悬浮')
+            $('img.wechat-img').attr('src', loadQR.wechat);
+            $('img.alipay-img').attr('src', loadQR.alipay);
+            $('.money-code').fadeIn();
+            $(this).addClass('active');
+        }, function() {
+            $('.money-code').fadeOut();
+            $(this).removeClass('active');
+        }, 800)
+
+            $('.money-like .reward-button').click(function() {
+                if ($(this).hasClass('active')) {
+                    $(this).find('img.wechat-img').attr('src', loadQR.wechat);
+                    $(this).find('img.alipay-img').attr('src', loadQR.alipay);
+                    $('.money-code').fadeOut();
+                    $(this).removeClass('active');
+                } else {
+                    $('.money-code').fadeIn();
+                    $(this).addClass('active');
+                }
+            })
+
+
+    },
     commentLoader: function() {
-        if(!$('body').hasClass('post-template')){
+        if (!$('body').hasClass('post-template')) {
             return false;
         }
         var dataThreadKey = GlobalConfigue.duoshuoDomain + location.pathname;
@@ -236,7 +281,7 @@ var General = {
                 return false
             } else {
                 console.log('增加评论');
-                if ( ($('.author-image').isOnScreenVisible() || $($('.read-next').isOnScreenVisible())) && $('.author-image').hasClass('duoshuo-loaded') == false) {
+                if (($('.author-image').isOnScreenVisible() || $($('.read-next').isOnScreenVisible())) && $('.author-image').hasClass('duoshuo-loaded') == false) {
                     $('.author-image').addClass('duoshuo-loaded');
                     loadJS('https://static.duoshuo.com/embed.js', function() {
                         var el = document.createElement('div');
@@ -337,6 +382,7 @@ var ImageSmartLoader = {
         }
 
     },
+
 
 }
 
