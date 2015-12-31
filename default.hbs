@@ -4,7 +4,6 @@
     {{! Document Settings }}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     {{! Page Meta }}
     <title>{{meta_title}}</title>
     <link rel="shortcut icon" href="{{asset "images/favicon.png"}}">
@@ -14,7 +13,6 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
     <link rel="author" href="https://plus.google.com/105790146178074084423/">
-
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/all.min.css"}}" />
     {{! Ghost outputs important style and meta data with this tag }}
@@ -32,22 +30,18 @@
 <body class="{{body_class}} nav-closed">
 {{! Everything else gets inserted here }}
 {{{body}}}
-
-<footer class="site-footer clearfix ">
-    <section class="copyright "><a href="{{@blog.url}} ">{{@blog.title}}</a> &copy; {{date format="YYYY "}}</section>
-    <section>
-    <a href="https://github.com/foru17/Yasuko">Theme Yasuko  </a> <a href="https://github.com/foru17/Yasuko" class="github-repo"><span class="gadget-github"></span>Star</a> Designed by <a href="https://luolei.org ">@罗磊</a>
-    </section>
-        <section class="poweredby ">Powered by  <a href="https://ghost.org ">Ghost</a></section>
-        <section><a href="http://www.miitbeian.gov.cn/">粤ICP备14004235号-1</a></section>
-</footer>
+    <footer class="site-footer clearfix ">
+        <section class="copyright "><a href="{{@blog.url}} ">{{@blog.title}}</a> &copy; {{date format="YYYY "}}</section>
+        <section>
+        <a href="https://github.com/foru17/Yasuko">Theme Yasuko  </a> <a href="https://github.com/foru17/Yasuko" class="github-repo"><span class="gadget-github"></span>Star</a> Designed by <a href="https://luolei.org ">@罗磊</a>
+        </section>
+            <section class="poweredby ">Powered by  <a href="https://ghost.org ">Ghost</a></section>
+            <section><a href="http://www.miitbeian.gov.cn/">粤ICP备14004235号</a></section>
+    </footer>
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
-
-    {{!--<script type="text/javascript" src="{{asset "js/lazy.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/webfont.js"}}"></script> --}}
     <script type="text/javascript" src="{{asset "js/all.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
     <script>
@@ -55,11 +49,33 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-21856187-2', 'luolei.org');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
     </script>
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "css/font.min.css"}}" /> --}}
+    <script>
+        (function(){
+            if (!window.addEventListener) return;
+            window.addEventListener('load', function(){
+                var performance = window.performance;
+                if (performance === undefined) return;
+                timing = window.performance.timing;
+                if (timing === undefined) return;
+                if (document.cookie.indexOf('statistics_clientid=') != -1) return;
+                var domain_lookup_time = timing.domainLookupEnd - timing.domainLookupStart;
+                var connect_time = timing.connectEnd - timing.connectStart;
+                var read_content_time = timing.responseEnd - timing.responseStart;
+                new Image().src = ('https:' == document.location.protocol ? 'https://' : 'http://')
+                    + 'stat.dnspod.cn/statistics/'
+                    + domain_lookup_time + "/"
+                    + connect_time + "/"
+                    + read_content_time + ".png";
+                var exdate=new Date();
+                exdate.setDate(exdate.getDate() + 1);
+                document.cookie="statistics_clientid=me"
+                + ";expires="+exdate.toGMTString();
+            }, false);
+        }());
+    </script>
 </body>
 </html>
