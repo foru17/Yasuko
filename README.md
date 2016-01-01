@@ -72,7 +72,7 @@ server {
 
 我的大部分图片都是放在又拍云的CDN上，又拍云已经赞助我的博客几年了，在这里再说一下感谢。图片向来是网络请求的大头，这一次，在图片加载上面做了几个处理。
 
-A.主要图片均lazyload:
+A.主要图片均lazyload:g
 
 延迟加载，只有滑动到可视区域才加载，Ghost改动Markdown渲染引擎不够方便，但是编辑的时候可以直接写html，需要直接把的代码写在编辑器里。
 
@@ -130,7 +130,7 @@ if (settings.webP_load == true) {
 
 C.进一步优化Iconfont
 
-<img data-url="https://luoleiorg.b0.upaiyun.com/blog/2015/12/iconfont.png" class="lazy" alt="full-img">
+![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/iconfont.png)
 
 这一次重新用[Sketch](https://www.sketchapp.com)整理了常见的社交网站icon，加入了国内常见的V2EX、知乎、简书等网站的icon，调用起来更加方便。通过阿里云[iconfont.cn](http://iconfont.cn)生成，字体font部署在阿里云CDN上。文章中也依旧增加了自动给引用的URL标识logo的功能。
 

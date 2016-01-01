@@ -283,7 +283,7 @@ var General = {
                 return false
             } else {
                 console.log('增加评论');
-                if (($('.author-image').isOnScreenVisible() || $($('.read-next').isOnScreenVisible())) && $('.author-image').hasClass('duoshuo-loaded') == false) {
+                if (($('.author-image').isOnScreenVisible() || $('.read-next').isOnScreenVisible()) && $('.author-image').hasClass('duoshuo-loaded') == false) {
                     $('.author-image').addClass('duoshuo-loaded');
                     loadJS('https://static.duoshuo.com/embed.js', function() {
                         var el = document.createElement('div');
