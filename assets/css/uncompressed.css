@@ -2622,6 +2622,11 @@ Copyright (c) 2014 Daniel Eden
     color: #363636;
 }
 
+.iconfont.undefined
+{
+    display: none !important;
+}
+
 .iconfont-self
 {
     color: red;

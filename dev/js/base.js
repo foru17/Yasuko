@@ -344,6 +344,15 @@ var ImageSmartLoader = {
         // alert(ImageSmartLoader.isWebPSupported);
         if (ImageSmartLoader.isWebPSupported == true) {
             console.log('宽度是' + General.viewWidth);
+            if (General.viewWidth == 768) {
+                $(".lazy").lazyload({
+                    advanced_load: true,
+                    data_attribute: 'url',
+                    webP_load: true,
+                    is_scale: false
+                });
+                return false;
+            } 
             if (General.viewWidth < 768) {
                 $(".lazy").lazyload({
                     advanced_load: true,
@@ -363,8 +372,17 @@ var ImageSmartLoader = {
             }
 
         } else {
-            // alert('加载普通')
-            if (General.viewWidth <= 1024) {
+            if (General.viewWidth == 768) {
+                $(".lazy").lazyload({
+                    advanced_load: true,
+                    data_attribute: 'url',
+                    webP_load: false,
+                    is_scale: true,
+                    scale_width: 1500
+                });
+                return false;
+            } 
+            if (General.viewWidth < 768) {
                 $(".lazy").lazyload({
                     advanced_load: true,
                     data_attribute: 'url',

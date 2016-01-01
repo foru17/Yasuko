@@ -1731,6 +1731,9 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0.6;
     color: #363636; }
 
+.iconfont.undefined {
+  display: none !important; }
+
 .iconfont-self {
   color: red; }
 
