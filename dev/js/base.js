@@ -285,7 +285,7 @@ var General = {
                 console.log('增加评论');
                 if (($('.author-image').isOnScreenVisible() || $('.read-next').isOnScreenVisible()) && $('.author-image').hasClass('duoshuo-loaded') == false) {
                     $('.author-image').addClass('duoshuo-loaded');
-                    loadJS('https://static.duoshuo.com/embed.js', function() {
+                    loadJS(General.absUrl + '/assets/js/duoshuo.modify.js', function() {
                         var el = document.createElement('div');
                         el.setAttribute('data-thread-key', dataThreadKey);
                         el.setAttribute('data-url', location.href);
