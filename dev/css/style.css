@@ -1024,7 +1024,7 @@ a.btn-post-excerpt {
     padding: 0 .5rem;
     line-height: 2.8rem;
     font-size: 1.6rem;
-    font-family: "Exo", sans-serif;
+    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
     vertical-align: top; }
     .single-post-inner a .iconfont {
       line-height: 2.8rem;
@@ -1035,7 +1035,7 @@ a.btn-post-excerpt {
     font-size: 1.6rem;
     line-height: 2.8rem;
     margin-top: 2.2rem;
-    font-family: "Exo" "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
   .single-post-inner p.with-img {
     margin: 0;
     padding: 0;
@@ -1099,6 +1099,13 @@ a.btn-post-excerpt {
 
 .money-like {
   padding: 2rem 0 3rem; }
+  .money-like .money-notice {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #595959;
+    font-style: italic;
+    margin: 1rem auto; }
   .money-like .reward-button {
     display: block;
     height: 4.6rem;
@@ -1137,6 +1144,8 @@ a.btn-post-excerpt {
       height: 12rem; }
       .money-like .money-code span.alipay-code {
         float: left; }
+        .money-like .money-code span.alipay-code a {
+          padding: 0; }
       .money-like .money-code span.wechat-code {
         float: right; }
     .money-like .money-code img {
@@ -1675,7 +1684,7 @@ Copyright (c) 2014 Daniel Eden
 
 .read-next-story .post {
   background: transparent;
-  padding: 6rem 3rem; }
+  padding: 4rem 3rem; }
 
 .read-next-story h2 {
   margin-top: 1rem;
@@ -2113,7 +2122,10 @@ Copyright (c) 2014 Daniel Eden
   .nav-header-container {
     width: 80%; }
   .read-next {
-    margin: 5rem auto 2rem; } }
+    margin: 5rem auto 2rem; }
+  .read-next-story .post {
+    background: transparent;
+    padding: 5rem 3rem; } }
 
 @media only screen and (max-width: 361px) {
   .site-footer {

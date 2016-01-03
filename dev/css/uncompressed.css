@@ -1469,7 +1469,7 @@ a.btn-post-excerpt
 }
 .single-post-inner a
 {
-    font-family: 'Exo', sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 2.8rem;
 
@@ -1489,7 +1489,7 @@ a.btn-post-excerpt
 }
 .single-post-inner p
 {
-    font-family: 'Exo' '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 1.6rem;
     line-height: 2.8rem;
 
@@ -1621,6 +1621,18 @@ a.btn-post-excerpt
 {
     padding: 2rem 0 3rem;
 }
+.money-like .money-notice
+{
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.4rem;
+
+    margin: 1rem auto; 
+
+    text-align: center;
+
+    color: #595959;
+}
 .money-like .reward-button
 {
     font-size: 2.4rem;
@@ -1675,6 +1687,10 @@ a.btn-post-excerpt
 .money-like .money-code span.alipay-code
 {
     float: left;
+}
+.money-like .money-code span.alipay-code a
+{
+    padding: 0;
 }
 .money-like .money-code span.wechat-code
 {
@@ -2533,7 +2549,7 @@ Copyright (c) 2014 Daniel Eden
 
 .read-next-story .post
 {
-    padding: 6rem 3rem; 
+    padding: 4rem 3rem; 
 
     background: transparent;
 }
@@ -3267,6 +3283,12 @@ Copyright (c) 2014 Daniel Eden
     .read-next
     {
         margin: 5rem auto 2rem;
+    }
+    .read-next-story .post
+    {
+        padding: 5rem 3rem; 
+
+        background: transparent;
     }
 }
 

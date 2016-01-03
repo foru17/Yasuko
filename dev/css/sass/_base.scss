@@ -506,7 +506,7 @@ a.btn-post-excerpt {
         padding: 0 .5rem;
         line-height: 2.8rem;
         font-size: 1.6rem;
-        font-family: $googleFontExo, sans-serif;
+        font-family: $googleFontExo, $fontOSX;
         vertical-align: top;
         // white-space: nowrap;
         .iconfont {
@@ -520,7 +520,7 @@ a.btn-post-excerpt {
         font-size: 1.6rem;
         line-height: 2.8rem;
         margin-top: 2.2rem;
-        font-family: $googleFontExo $fontOSX;
+        font-family: $googleFontExo ,$fontOSX;
     }
     p.with-img {
         margin: 0;
@@ -602,6 +602,14 @@ a.btn-post-excerpt {
 }
 .money-like {
     padding: 2rem 0 3rem;
+    .money-notice{
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        text-align: center;
+        color:#595959;
+        font-style: italic;
+        margin:1rem auto;
+    }
     .reward-button {
         display: block;
         height: 4.6rem;
@@ -621,7 +629,7 @@ a.btn-post-excerpt {
         background: -webkit-linear-gradient(top, #fccd60 0%, #fbae12 100%, #2989d8 100%, #207cca 100%);
         background: linear-gradient(to bottom, #fccd60 0%, #fbae12 100%, #2989d8 100%, #207cca 100%);
         position: relative;
-        -webkit-user-select:none;  
+        -webkit-user-select:none;
         &:hover {
             // opacity: .8;
         }
@@ -644,6 +652,9 @@ a.btn-post-excerpt {
             height: 12rem;
             &.alipay-code{
                 float: left;
+                a{
+                    padding:0;
+                }
             }
             &.wechat-code{
                 float: right;
@@ -1274,7 +1285,7 @@ Copyright (c) 2014 Daniel Eden
 }
 .read-next-story .post {
     background: transparent;
-    padding: 6rem 3rem;
+    padding: 4rem 3rem;
 }
 .read-next-story h2 {
     margin-top: 1rem;
