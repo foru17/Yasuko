@@ -108,7 +108,11 @@ gulp.task('scripts', function() {
         .pipe(sourcemaps.init())
         .pipe(jshint())
         .pipe(jshint.reporter(stylish))
-        .pipe(uglify())
+        .pipe(uglify({
+            compress: {
+                drop_console: true
+            }
+        }))
         .pipe(concat('all.min.js'))
         .pipe(gulp.dest('assets/js'))
         .pipe(rename('dev.min.js'))

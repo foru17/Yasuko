@@ -52,7 +52,7 @@ function loadJS(url, callback, el) {
     }
 };
 
-/** 
+/**
  * Yasuko 配置文件
  * 多说评论调用等
  */
@@ -242,9 +242,9 @@ var General = {
             wechat: '/assets/images/qr-wechat-256.png'
         }
         var loadQRUrl;
-        if(!!General.isWechat){
+        if (!!General.isWechat) {
             $('.wechat-code b').html('长按上方二维码打赏作者');
-             // $('.qr-code').fadeOut();
+            // $('.qr-code').fadeOut();
         }
 
         $('.money-like .reward-button').hover(function() {
@@ -258,18 +258,18 @@ var General = {
             $(this).removeClass('active');
         }, 800)
 
-            $('.money-like .reward-button').click(function() {
-                if ($(this).hasClass('active')) {
-                    $(this).find('img.wechat-img').attr('src', loadQR.wechat);
-                    $(this).find('img.alipay-img').attr('src', loadQR.alipay);
-                    $('.money-code').fadeOut();
-                    $(this).removeClass('active');
-                    
-                } else {
-                    $('.money-code').fadeIn();
-                    $(this).addClass('active');
-                }
-            })
+        $('.money-like .reward-button').click(function() {
+            if ($(this).hasClass('active')) {
+                $(this).find('img.wechat-img').attr('src', loadQR.wechat);
+                $(this).find('img.alipay-img').attr('src', loadQR.alipay);
+                $('.money-code').fadeOut();
+                $(this).removeClass('active');
+
+            } else {
+                $('.money-code').fadeIn();
+                $(this).addClass('active');
+            }
+        })
 
 
     },
@@ -352,7 +352,7 @@ var ImageSmartLoader = {
                     is_scale: false
                 });
                 return false;
-            } 
+            }
             if (General.viewWidth < 768) {
                 $(".lazy").lazyload({
                     advanced_load: true,
@@ -381,7 +381,7 @@ var ImageSmartLoader = {
                     scale_width: 1500
                 });
                 return false;
-            } 
+            }
             if (General.viewWidth < 768) {
                 $(".lazy").lazyload({
                     advanced_load: true,
@@ -436,6 +436,7 @@ $(document).ready(function() {
 
             elements.each(function() {
                 var $this = $(this);
+
                 if (settings.skip_invisible && !$this.is(":visible")) {
                     return;
                 }
@@ -506,14 +507,19 @@ $(document).ready(function() {
                         settings.appear.call(self, elements_left, settings);
                     }
                     var updatedUrl = $self.attr("data-" + settings.data_attribute);
-                    if (settings.advanced_load == true) {
-                        updatedUrl += '!';
-                    }
-                    if (settings.is_scale == true) {
-                        updatedUrl += '/fw/' + settings.scale_width;
-                    }
-                    if (settings.webP_load == true) {
-                        updatedUrl += '/format/webp';
+                    // console.log('图片地址' +updatedUrl.indexOf('upaiyun'));
+                    // console.log('CDN地址' +updatedUrl.indexOf('file.is26.com'));
+                    if (updatedUrl.indexOf('upaiyun') > -1 || updatedUrl.indexOf('file.is26.com') > -1) {
+                        // alert(1)
+                        if (settings.advanced_load == true) {
+                            updatedUrl += '!';
+                        }
+                        if (settings.is_scale == true) {
+                            updatedUrl += '/fw/' + settings.scale_width;
+                        }
+                        if (settings.webP_load == true) {
+                            updatedUrl += '/format/webp';
+                        }
                     }
 
                     // console.log(updatedUrl);
@@ -693,6 +699,7 @@ $(document).ready(function() {
     if ($('body').hasClass('post-template')) {
         General.addIcons();
         General.commentLoader();
+
     }
 
 })
