@@ -795,7 +795,7 @@ html
 
 html
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 62.5%;
 
     max-height: 100%;
@@ -1204,7 +1204,7 @@ h1
 
 .post-short-intro
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 1.2rem;
     line-height: 1.8rem;
 
@@ -1310,7 +1310,7 @@ a.btn-post-excerpt
 }
 .post-title a
 {
-    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
     line-height: 3.6rem;
 }
 
@@ -1383,7 +1383,7 @@ a.btn-post-excerpt
 }
 .pagination a
 {
-    font-family: 'Exo' '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo' '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     line-height: 2.4rem;
 
@@ -1414,7 +1414,7 @@ a.btn-post-excerpt
 
 .single-post-inner
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 1.8rem;
 
     overflow: hidden;
@@ -1469,7 +1469,7 @@ a.btn-post-excerpt
 }
 .single-post-inner a
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 2.8rem;
 
@@ -1489,7 +1489,7 @@ a.btn-post-excerpt
 }
 .single-post-inner p
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 1.6rem;
     line-height: 2.8rem;
 
@@ -1811,7 +1811,7 @@ a.btn-post-excerpt
 
 .home-logo
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 2.2rem;
     font-weight: bold;
     line-height: 4rem;
@@ -1884,7 +1884,7 @@ a.btn-post-excerpt
 .home-info-container h2,
 .home-info-container h4
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     font-weight: lighter;
 
     color: #fff;
@@ -1948,7 +1948,7 @@ a.btn-post-excerpt
 
 .post-page-time
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 2rem;
 
@@ -1964,7 +1964,7 @@ a.btn-post-excerpt
 
 .post-page-author
 {
-    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     line-height: 2rem;
 
@@ -1981,7 +1981,7 @@ a.btn-post-excerpt
 
 .post-page-title
 {
-    font-family: 'Exo' '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo' '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     font-size: 4.2rem;
     font-weight: lighter;
     line-height: 4.8rem;
@@ -2228,7 +2228,7 @@ a.btn-post-excerpt
 }
 .author-meta span
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
 
     margin-right: 1rem;
 
@@ -2252,7 +2252,7 @@ a.btn-post-excerpt
 }
 .comment-area h4
 {
-    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-style: italic;
 
     display: block;
@@ -3136,7 +3136,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .post-excerpt-mirror a
     {
-        font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+        font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
         font-size: 2rem;
     }
     .post-excerpt-mirror a.btn-post-excerpt

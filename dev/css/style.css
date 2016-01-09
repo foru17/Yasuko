@@ -602,7 +602,7 @@ html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
 
 a {
   text-decoration: none; }
@@ -863,7 +863,7 @@ h1 {
   text-overflow: ellipsis;
   max-height: 3.6rem;
   overflow: hidden;
-  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
 
 .post-excerpt-mirror-mask {
   display: none;
@@ -923,7 +923,7 @@ a.btn-post-excerpt {
   text-overflow: ellipsis;
   overflow: hidden; }
   .post-title a {
-    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif, sans-serif;
+    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif, sans-serif;
     line-height: 3.6rem; }
 
 .post-meta span {
@@ -971,7 +971,7 @@ a.btn-post-excerpt {
   width: 70%; }
   .pagination a {
     font-size: 1.4rem;
-    font-family: "Exo" "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    font-family: "Exo" "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
     border-radius: .3rem;
     display: inline-block;
     text-align: center;
@@ -993,7 +993,7 @@ a.btn-post-excerpt {
   padding: 0rem 2.8% .8rem;
   overflow: hidden;
   border-bottom: 1px dashed #e5e5e5;
-  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
   .single-post-inner img {
     display: block;
     margin: 0 auto;
@@ -1024,7 +1024,7 @@ a.btn-post-excerpt {
     padding: 0 .5rem;
     line-height: 2.8rem;
     font-size: 1.6rem;
-    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
     vertical-align: top; }
     .single-post-inner a .iconfont {
       line-height: 2.8rem;
@@ -1035,7 +1035,7 @@ a.btn-post-excerpt {
     font-size: 1.6rem;
     line-height: 2.8rem;
     margin-top: 2.2rem;
-    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
   .single-post-inner p.with-img {
     margin: 0;
     padding: 0;
@@ -1229,7 +1229,7 @@ a.btn-post-excerpt {
   z-index: 99;
   opacity: .7;
   border-radius: .1rem;
-  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
 
 .back-home {
   background: none repeat scroll 0 0 transparent;
@@ -1263,7 +1263,7 @@ a.btn-post-excerpt {
   margin-top: 16rem; }
   .home-info-container h2, .home-info-container h4 {
     color: #fff;
-    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     text-shadow: 0 1px 1px #595959; }
     .home-info-container h2:hover, .home-info-container h4:hover {
@@ -1302,7 +1302,7 @@ a.btn-post-excerpt {
 .post-page-time {
   display: inline-block;
   float: left;
-  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
   text-align: left;
   height: 2rem;
   line-height: 2rem;
@@ -1313,7 +1313,7 @@ a.btn-post-excerpt {
   display: inline-block;
   float: left;
   text-align: left;
-  font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
   height: 2rem;
   line-height: 2rem;
@@ -1328,7 +1328,7 @@ a.btn-post-excerpt {
   margin: 0 auto;
   text-align: left;
   font-weight: lighter;
-  font-family: "Exo" "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-family: "Exo" "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1487,7 +1487,7 @@ a.btn-post-excerpt {
   .author-meta span {
     margin-right: 1rem;
     color: #9EABB3;
-    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+    font-family: "Exo", "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
     .author-meta span a {
       color: #9EABB3; }
 
@@ -1510,7 +1510,7 @@ a.btn-post-excerpt {
     margin: 0 auto;
     color: #333;
     font-style: italic;
-    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
 
 .comment-area.toggle-up {
   display: block;
@@ -2038,7 +2038,7 @@ Copyright (c) 2014 Daniel Eden
     height: 20rem; }
   .post-excerpt-mirror a {
     font-size: 2rem;
-    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
+    font-family: "-apple-system", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
     .post-excerpt-mirror a.btn-post-excerpt {
       font-size: 1.4rem;
       line-height: 1.8rem;
