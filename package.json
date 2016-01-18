@@ -16,6 +16,7 @@
     "gulp-ftp": "^1.1.0",
     "gulp-image-resize": "^0.7.1",
     "gulp-imagemin": "^2.1.0",
+    "jshint": "2.8.0",
     "gulp-jshint": "^2.0.0",
     "gulp-minify-css": "^1.2.1",
     "gulp-plumber": "^1.0.0",
