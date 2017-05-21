@@ -280,7 +280,7 @@ var General = {
         $(window).scroll(function() {
             if ($('.author-image').isOnScreenVisible()) {
                 // if (General.viewWidth > 960) {
-                    loadJS('http://changyan.sohu.com/upload/changyan.js', function() {
+                    loadJS('https://changyan.sohu.com/upload/changyan.js', function() {
                         window.changyan.api.config({
                             appid: appid,
                             conf: conf
