@@ -62,7 +62,7 @@ var duoshuoQuery = {
 };
 
 var GlobalConfigue = {
-    duoshuoDomain: 'https://luolei.org',
+    masterDomain: 'https://luolei.org',
 }
 
 
@@ -92,11 +92,9 @@ var General = {
         General.webFontLoader();
         General.scrollToPos();
         General.arrowEvent();
-        General.commentLoader();
     },
     updateImageWidth: function() {
         var $postContent = $(".post-content");
-        // $postContent.fitVids();
 
         function updateImageWidth() {
             var $this = $(this),
@@ -129,14 +127,12 @@ var General = {
             }
         };
         loadJS(General.absUrl + '/assets/js/webfont.js', function() {
-            console.log('加载字体JS');
             WebFont.load({
                 custom: {
                     families: ['Exo', 'iconfont']
                 }
             });
         })
-
 
 
 
@@ -171,7 +167,6 @@ var General = {
             }, 666, function() {
                 window.location.hash = '#';
             });
-            console.log('我跳');
         })
     },
     /*给文章中的url添加iconfont方便识别*/
@@ -236,7 +231,6 @@ var General = {
     },
     //打赏
     rewardLoader: function() {
-
         var loadQR = {
             alipay: '/assets/images/qr-alipay-256.png',
             wechat: '/assets/images/qr-wechat-256.png'
@@ -244,7 +238,6 @@ var General = {
         var loadQRUrl;
         if (!!General.isWechat) {
             $('.wechat-code b').html('长按上方二维码打赏作者');
-            // $('.qr-code').fadeOut();
         }
 
         $('.money-like .reward-button').hover(function() {
@@ -274,32 +267,27 @@ var General = {
 
     },
     commentLoader: function() {
+        var appid = 'cyt1tJHSI';
+        var conf = 'prod_213d23efd9c346f1d884951eff4a4efd';
+
         if (!$('body').hasClass('post-template')) {
             return false;
         }
-        var dataThreadKey = GlobalConfigue.duoshuoDomain + location.pathname;
+        // 这里设置评论组件的threadId
+        var dataThreadKey = GlobalConfigue.masterDomain + location.pathname;
+        $('#SOHUCS').attr('sid', dataThreadKey)
+
         $(window).scroll(function() {
-            if ($('.comment-area').has('div').length > 0) {
-                return false
-            } else {
-                console.log('增加评论');
-                if (($('.author-image').isOnScreenVisible() || $('.read-next').isOnScreenVisible()) && $('.author-image').hasClass('duoshuo-loaded') == false) {
-                    $('.author-image').addClass('duoshuo-loaded');
-                    loadJS(General.absUrl + '/assets/js/duoshuo.modify.js', function() {
-                        var el = document.createElement('div');
-                        el.setAttribute('data-thread-key', dataThreadKey);
-                        el.setAttribute('data-url', location.href);
-                        el.setAttribute('data-title', $('title').html());
-                        DUOSHUO.EmbedThread(el);
-                        scrollStop = true;
-                        setTimeout(function() {
-                            $('.comment-area').append(el);
-                        }, 250)
-
+            if ($('.author-image').isOnScreenVisible()) {
+                // if (General.viewWidth > 960) {
+                    loadJS('http://changyan.sohu.com/upload/changyan.js', function() {
+                        window.changyan.api.config({
+                            appid: appid,
+                            conf: conf
+                        })
                     })
-                }
-            }
-
+                // }
+            } 
         });
     }
 }
@@ -478,8 +466,6 @@ $(document).ready(function() {
         /* Fire one scroll event per scroll. Not one scroll event per image. */
         if (0 === settings.event.indexOf("scroll")) {
             $container.bind(settings.event, function() {
-                // console.log('滚动了111');
-                // console.log('滚动');
                 return update();
             });
         }

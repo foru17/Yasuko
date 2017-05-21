@@ -110,7 +110,7 @@ gulp.task('scripts', function() {
         .pipe(jshint.reporter(stylish))
         .pipe(uglify({
             compress: {
-                drop_console: true
+                drop_console: false
             }
         }))
         .pipe(concat('all.min.js'))
