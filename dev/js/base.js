@@ -1,3 +1,5 @@
+
+var disqus_config;
 $.fn.extend({
 
     isOnScreenVisible: function() {
@@ -275,8 +277,7 @@ var General = {
         }
         // 这里设置评论组件的threadId
         var dataThreadKey = GlobalConfigue.masterDomain + location.pathname;
-        $('#SOHUCS').attr('sid', dataThreadKey)
-        var disqus_config = function() {
+        disqus_config = function() {
             this.page.url = dataThreadKey; // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = dataThreadKey; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
