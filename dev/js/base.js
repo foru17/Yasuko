@@ -276,18 +276,27 @@ var General = {
         // 这里设置评论组件的threadId
         var dataThreadKey = GlobalConfigue.masterDomain + location.pathname;
         $('#SOHUCS').attr('sid', dataThreadKey)
-
+        var disqus_config = function() {
+            this.page.url = dataThreadKey; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = dataThreadKey; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
         $(window).scroll(function() {
-            if ($('.author-image').isOnScreenVisible()) {
+            if ($('.author-image').isOnScreenVisible() && !$('.author-image').hasClass('comment-loaded')) {
+
+                var d = document,
+                    s = d.createElement('script');
+
+                s.src = 'https://luoleiorg.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                // (d.head || d.body).appendChild(s);
+                
                 // if (General.viewWidth > 960) {
-                    loadJS('https://changyan.sohu.com/upload/changyan.js', function() {
-                        window.changyan.api.config({
-                            appid: appid,
-                            conf: conf
-                        })
-                    })
+                loadJS('https://luoleiorg.disqus.com/embed.js', function() {
+                        $('.author-image').addClass('comment-loaded')
+                })
                 // }
-            } 
+            }
         });
     }
 }
