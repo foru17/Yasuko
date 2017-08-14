@@ -253,9 +253,7 @@ E.其他优化
 
 > 在这里我也想做一个实验，如果你觉得我过去的文章和作品对你有一定帮助，就随意打赏我点钱，也让我看看我的这篇文章都在什么时候被大家看到，几毛几块都可以。
 
-点下面的「赏」，根据自己的情况扫描二维码，支付宝或者微信打赏均可。
-
-后续[Yasuko](https://github.com/foru17/yasuko)主题会持续更新和优化，也欢迎各位的Star。
+![](http://luoleiorg.b0.upaiyun.com/vogue/qr3.gif)
 
 
 ## Copyright & License
