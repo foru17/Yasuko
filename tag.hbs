@@ -2,7 +2,7 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
-    <header id="header" data-url="http://luoleiorg.b0.upaiyun.com/tmp/yasuko/bg.jpeg" class="home-header lazy blog-background banner-mask {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <header id="header" data-url="http://luoleiorg.b0.upaiyun.com/tmp/yasuko/bg.jpeg" class="home-header lazy blog-background banner-mask {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
         <div class="header-wrap">
         <div class="home-info-container">
             <a href="{{@blog.url}}"><h2>Every thing about</h2></a>

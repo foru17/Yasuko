@@ -1,11 +1,11 @@
-<img src="https://luoleiorg.b0.upaiyun.com/blog/yasuko/wechat-thumb.jpg!wechatsmall" class="wechat-only">
+<img src="https://img.nmchgx.com/blog/base/wechat-thumb.png" class="wechat-only">
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
 
 <article class="post-in-list {{post_class}}">
     <section class="post-excerpt">
     <a href="{{url}}">
-    {{content words="0"}}
+    <img src="{{img_url feature_image}}" alt="">
     </a>
     <div class="info-mask">
 <div class="mask-wrapper">
@@ -21,7 +21,7 @@
     </section>
     <div class="post-excerpt-mirror">
     <div class="post-excerpt-mirror-mask">
-    <a href="{{url}}">{{content words="0"}}</a>
+    <a href="{{url}}"><img src="{{img_url feature_image}}" alt=""></a>
 
     <div class="excert-detail-container">
         <div class="post-meta">
