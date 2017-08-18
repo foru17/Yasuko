@@ -5,9 +5,9 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-    {{#if image}}
-    <img src="{{image}}!wechatsmall" class="wechat-only">
-    <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{image}}">
+    {{#if feature_image}}
+    <img src="{{feature_image}}!wechatsmall" class="wechat-only">
+    <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{feature_image}}">
     {{else}}
     <img src="https://luoleiorg.b0.upaiyun.com/blog/yasuko/yasuko-wechat.jpg!" class="hide">
     <header id="header" class="home-header blog-background banner-mask lazy" data-url="https://luoleiorg.b0.upaiyun.com/tmp/yasuko/yasuko.jpg" style="background-image:no-cover">
@@ -76,9 +76,9 @@
 
     {{#author}}
                 <section class="author">
-                 {{#if image}}
+                 {{#if profile_image}}
             <figure class="author-image">
-                <a class="img" href="javascript:;" style="background-image: url('{{image}}')"><span class="hide">{{name}}'s Picture</span></a>
+                <a class="img" href="javascript:;" style="background-image: url('{{profile_image}}')"><span class="hide">{{name}}'s Picture</span></a>
             </figure>
               {{/if}}
 
@@ -102,7 +102,11 @@
         </section>
         {{/author}}
 
+
+
+
     </article>
+
           <section class="share">
             <div class="share-icons" id="share-icons">
                <a class="icon-share" href="http://weibo.com/foru17/">
@@ -125,7 +129,7 @@
         </section>
 <aside class="read-next">
     {{#next_post}}
-    <a class="read-next-story {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story {{#if feature_image}} lazy" data-url="{{feature_image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="6"}}&hellip;</p>
@@ -133,7 +137,7 @@
     </a>
     {{/next_post}}
     {{#prev_post}}
-    <a class="read-next-story prev {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story prev {{#if feature_image}} lazy" data-url="{{feature_image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="6"}}&hellip;</p>
