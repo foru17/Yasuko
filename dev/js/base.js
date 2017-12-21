@@ -277,27 +277,10 @@ var General = {
         var dataThreadKey = GlobalConfigue.masterDomain + location.pathname;
         $(window).scroll(function() {
             if ($('.author-image').isOnScreenVisible() && !$('.author-image').hasClass('comment-loaded')) {
-
-                var d = document,
-                    s = d.createElement('script');
-
-                s.src = 'https://luoleiorg.disqus.com/embed.js';
-
-                s.setAttribute('data-timestamp', +new Date());
-                // (d.head || d.body).appendChild(s);
-
-                // if (General.viewWidth > 960) {
-                loadJS('https://luoleiorg.disqus.com/embed.js', function() {
+                console.log('加载评论')
+                loadJS('https://cdn-city.livere.com/js/embed.dist.js', function() {
                         $('.author-image').addClass('comment-loaded');
-                        DISQUS.reset({
-                            reload: true,
-                            config: function() {
-                                this.page.identifier = dataThreadKey
-                                this.page.url = dataThreadKey
-                            }
-                        });
                     })
-                    // }
             }
         });
     }
