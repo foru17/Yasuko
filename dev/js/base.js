@@ -202,30 +202,48 @@ var General = {
                 }
             }
         }
-
         return _output;
     },
+
+    // 获得路径中的domain
+    extractHostname: function(url) {
+        var hostname;
+        //find & remove protocol (http, ftp, etc.) and get hostname
+
+        if (url.indexOf("://") > -1) {
+            hostname = url.split('/')[2];
+        } else {
+            hostname = url.split('/')[0];
+        }
+
+        //find & remove port number
+        hostname = hostname.split(':')[0];
+        //find & remove "?"
+        hostname = hostname.split('?')[0];
+
+        return hostname;
+    },
+
+
     addIcons: function() {
+        var self = this;
         /*给博客文章地址url添加ico识别*/
-        $('.single-post-inner  a:not(:has(img))').each(function(i) {
+        $('.post-original  a:not(:has(img))').each(function(i) {
             var _src = $(this).attr('href');
             var tmp = document.createElement('a');
             tmp.href = _src;
             _selfDomain = tmp.hostname;
-            General.urlIconlize(_selfDomain);
-            console.log(_selfDomain);
-            $(this).prepend('<i class="iconfont ' + General.urlIconlize(_selfDomain) + '"></i>');
+
+            if (General.urlIconlize(_selfDomain)) {
+                General.urlIconlize(_selfDomain);
+                $(this).prepend('<i class="iconfont ' + General.urlIconlize(_selfDomain) + '"></i>');
+            } else {
+                $(this).prepend('<i class="favicon-added" ><img src=https://f.ydr.me/?url=' + tmp.hostname + '></i>');
+            }
+
+
             var _selfColor = $(this).find('i').css('color'),
                 _originalColor = $(this).css('color');
-
-            /*鼠标悬浮时*/
-            $(this).hover(function() {
-                $(this).css('color', _selfColor);
-                $(this).addClass('animated pulse');
-            }, function() {
-                $(this).css('color', _originalColor);
-                $(this).removeClass('animated pulse');
-            });
 
         });
     },
@@ -279,8 +297,8 @@ var General = {
             if ($('.author-image').isOnScreenVisible() && !$('.author-image').hasClass('comment-loaded')) {
                 console.log('加载评论')
                 loadJS('https://cdn-city.livere.com/js/embed.dist.js', function() {
-                        $('.author-image').addClass('comment-loaded');
-                    })
+                    $('.author-image').addClass('comment-loaded');
+                })
             }
         });
     }

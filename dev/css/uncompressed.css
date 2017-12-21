@@ -1487,6 +1487,28 @@ a.btn-post-excerpt
 
     vertical-align: baseline;
 }
+.single-post-inner a .favicon-added
+{
+    line-height: 2.8rem;
+
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    width: 1.4rem; 
+    height: 1.4rem;
+    padding-right: .2rem;
+
+    text-align: center;
+    vertical-align: middle;
+}
+.single-post-inner a .favicon-added img
+{
+    display: block;
+
+    width: 100%;
+}
 .single-post-inner p
 {
     font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 

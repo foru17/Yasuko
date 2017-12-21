@@ -1030,6 +1030,19 @@ a.btn-post-excerpt {
       line-height: 2.8rem;
       padding-right: .3rem;
       vertical-align: baseline; }
+    .single-post-inner a .favicon-added {
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      line-height: 2.8rem;
+      padding-right: .2rem;
+      vertical-align: middle;
+      height: 1.4rem;
+      overflow: hidden;
+      width: 1.4rem; }
+      .single-post-inner a .favicon-added img {
+        display: block;
+        width: 100%; }
   .single-post-inner p {
     color: #333;
     font-size: 1.6rem;

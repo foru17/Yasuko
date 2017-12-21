@@ -508,11 +508,25 @@ a.btn-post-excerpt {
         font-size: 1.6rem;
         font-family: $googleFontExo, $fontOSX;
         vertical-align: top;
-        // white-space: nowrap;
         .iconfont {
             line-height: 2.8rem;
             padding-right: .3rem;
             vertical-align: baseline;
+        }
+        .favicon-added{
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            line-height: 2.8rem;
+            padding-right: .2rem;
+            vertical-align: middle;
+            height: 1.4rem;
+            overflow: hidden;
+            width: 1.4rem;
+            img{
+                display: block;
+                width: 100%;
+            }
         }
     }
     p {
