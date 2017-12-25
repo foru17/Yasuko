@@ -215,7 +215,6 @@ var General = {
         } else {
             hostname = url.split('/')[0];
         }
-
         //find & remove port number
         hostname = hostname.split(':')[0];
         //find & remove "?"
@@ -240,7 +239,6 @@ var General = {
             } else {
                 $(this).prepend('<i class="favicon-added" ><img src=https://f.ydr.me/?url=' + tmp.hostname + '></i>');
             }
-
 
             var _selfColor = $(this).find('i').css('color'),
                 _originalColor = $(this).css('color');
@@ -295,9 +293,9 @@ var General = {
         var dataThreadKey = GlobalConfigue.masterDomain + location.pathname;
         $(window).scroll(function() {
             if ($('.author-image').isOnScreenVisible() && !$('.author-image').hasClass('comment-loaded')) {
-                console.log('加载评论')
+                $('.author-image').addClass('comment-loaded');
                 loadJS('https://cdn-city.livere.com/js/embed.dist.js', function() {
-                    $('.author-image').addClass('comment-loaded');
+                    console.log('测试加载')
                 })
             }
         });
