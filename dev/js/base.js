@@ -287,7 +287,7 @@ var General = {
                         api: 'https://disqus.is26.com/api',
                         site: 'https://luolei.org',
                         mode: 1,
-                        timeout: 3000,
+                        timeout: 1000,
                         init: true,
                         auto:true
                     });
