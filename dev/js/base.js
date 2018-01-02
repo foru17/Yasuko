@@ -52,19 +52,6 @@ function loadJS(url, callback, el) {
     }
 };
 
-/**
- * Yasuko 配置文件
- * 多说评论调用等
- */
-
-var duoshuoQuery = {
-    short_name: "luolei"
-};
-
-var GlobalConfigue = {
-    masterDomain: 'https://luolei.org',
-}
-
 
 var General = {
     isMobile: false,
@@ -123,7 +110,7 @@ var General = {
             },
             custom: {
                 families: ['Exo', 'iconfont'],
-                urls: [General.absUrl + '/assets/css/font.min.css']
+                urls: [General.absUrl + '/assets/css/font.min.css','https://luo.is26.com/source/iDisqus.min.css']
             }
         };
         loadJS(General.absUrl + '/assets/js/webfont.js', function() {
@@ -255,17 +242,17 @@ var General = {
         if (!!General.isWechat) {
             $('.wechat-code b').html('长按上方二维码打赏作者');
         }
-
         $('.money-like .reward-button').hover(function() {
-            console.log('悬浮')
             $('img.wechat-img').attr('src', loadQR.wechat);
             $('img.alipay-img').attr('src', loadQR.alipay);
-            $('.money-code').fadeIn();
-            $(this).addClass('active');
+            if( !$('.reward-button').hasClass('active')){
+                $('.money-code').fadeIn('slow');
+                $(this).addClass('active');
+            }
         }, function() {
-            $('.money-code').fadeOut();
             $(this).removeClass('active');
-        }, 800)
+            $('.money-code').hide();
+        }, 2000)
 
         $('.money-like .reward-button').click(function() {
             if ($(this).hasClass('active')) {
@@ -275,7 +262,7 @@ var General = {
                 $(this).removeClass('active');
 
             } else {
-                $('.money-code').fadeIn();
+                $('.money-code').hide();
                 $(this).addClass('active');
             }
         })
@@ -289,13 +276,21 @@ var General = {
         if (!$('body').hasClass('post-template')) {
             return false;
         }
+
         // 这里设置评论组件的threadId
-        var dataThreadKey = GlobalConfigue.masterDomain + location.pathname;
         $(window).scroll(function() {
             if ($('.author-image').isOnScreenVisible() && !$('.author-image').hasClass('comment-loaded')) {
                 $('.author-image').addClass('comment-loaded');
-                loadJS('https://cdn-city.livere.com/js/embed.dist.js', function() {
-                    console.log('测试加载')
+                loadJS('https://luo.is26.com/source/iDisqus.min.js', function() {
+                    var disq = new iDisqus('disqus_comment', {
+                        forum: 'luoleiorg',
+                        api: 'https://disqus.is26.com/api',
+                        site: 'https://luolei.org',
+                        mode: 2,
+                        timeout: 3000,
+                        init: true
+                    });
+
                 })
             }
         });

@@ -2636,6 +2636,13 @@ Copyright (c) 2014 Daniel Eden
     border-left: rgba(0, 0, 100, .04) 1px solid;
 }
 
+#disqus_proxy_thread .post
+{
+    opacity: 1 !important;
+    -webkit-box-shadow: none !important; 
+            box-shadow: none !important;
+}
+
 /* 载入iconfont字体 */
 .iconfont
 {
