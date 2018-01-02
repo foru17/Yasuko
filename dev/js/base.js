@@ -286,8 +286,8 @@ var General = {
                         forum: 'luoleiorg',
                         api: 'https://disqus.is26.com/api',
                         site: 'https://luolei.org',
-                        mode: 1,
-                        timeout: 1000,
+                        mode: 3,
+                        timeout: 200,
                         init: true,
                         auto:true
                     });
