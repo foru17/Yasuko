@@ -110,7 +110,7 @@ var General = {
             },
             custom: {
                 families: ['Exo', 'iconfont'],
-                urls: [General.absUrl + '/assets/css/font.min.css','https://luo.is26.com/source/iDisqus.min.css']
+                urls: [General.absUrl + '/assets/css/font.min.css', 'https://luo.is26.com/source/iDisqus.min.css']
             }
         };
         loadJS(General.absUrl + '/assets/js/webfont.js', function() {
@@ -242,27 +242,25 @@ var General = {
         if (!!General.isWechat) {
             $('.wechat-code b').html('长按上方二维码打赏作者');
         }
-        $('.money-like .reward-button').hover(function() {
-            $('img.wechat-img').attr('src', loadQR.wechat);
-            $('img.alipay-img').attr('src', loadQR.alipay);
-            if( !$('.reward-button').hasClass('active')){
-                $('.money-code').fadeIn('slow');
-                $(this).addClass('active');
-            }
-        }, function() {
-            $(this).removeClass('active');
-            $('.money-code').hide();
-        }, 2000)
+        // $('.money-like .reward-button').hover(function() {
+        //     $('img.wechat-img').attr('src', loadQR.wechat);
+        //     $('img.alipay-img').attr('src', loadQR.alipay);
+        //     $('.money-code').fadeIn('slow');
+        //     $(this).addClass('active');
+        // }, function() {
+        //     $(this).removeClass('active');
+        //     $('.money-code').hide();
+        // }, 2000)
 
         $('.money-like .reward-button').click(function() {
             if ($(this).hasClass('active')) {
-                $(this).find('img.wechat-img').attr('src', loadQR.wechat);
-                $(this).find('img.alipay-img').attr('src', loadQR.alipay);
                 $('.money-code').fadeOut();
                 $(this).removeClass('active');
 
             } else {
-                $('.money-code').hide();
+                $('img.wechat-img').attr('src', loadQR.wechat);
+                $('img.alipay-img').attr('src', loadQR.alipay);
+                $('.money-code').fadeIn();
                 $(this).addClass('active');
             }
         })
@@ -289,7 +287,7 @@ var General = {
                         mode: 3,
                         timeout: 200,
                         init: true,
-                        auto:true
+                        auto: true
                     });
 
                 })
