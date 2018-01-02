@@ -286,9 +286,10 @@ var General = {
                         forum: 'luoleiorg',
                         api: 'https://disqus.is26.com/api',
                         site: 'https://luolei.org',
-                        mode: 2,
+                        mode: 1,
                         timeout: 3000,
-                        init: true
+                        init: true,
+                        auto:true
                     });
 
                 })
